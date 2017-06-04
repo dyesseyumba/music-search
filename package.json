@@ -1,0 +1,24 @@
+{
+  "name": "compucorp-music-search",
+  "version": "1.0.0",
+  "repository": "https://dyesseyumba@gitlab.com/dyesseyumba/compucorp-music-search.git",
+  "author": "Dyesse YUMBA NDUBA <yumba.nduba@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-ui-router": "^1.0.3"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.5.1",
+    "browser-sync": "^2.18.12",
+    "browserify": "^14.4.0",
+    "browserify-ngannotate": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
