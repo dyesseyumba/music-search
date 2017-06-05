@@ -9,6 +9,7 @@ var rename        = require('gulp-rename');
 var templateCache = require('gulp-angular-templatecache');
 var uglify        = require('gulp-uglify');
 var merge         = require('merge-stream');
+var sass          = require('gulp-sass');
 
 // Where our files are located
 var jsFiles = "src/*/**/*.js";
@@ -76,17 +77,23 @@ gulp.task('images', ['favicon'], function () {
 });
 
 // manage favicon
-// gulp.task('favicon', function () {
-//     return gulp.src('src/favicon.ico')
-//         .pipe(newer('build/'))
-//         .pipe(gulp.dest('build/'));
-// });
+gulp.task('favicon', function () {
+    return gulp.src('src/favicon.ico')
+        .pipe(newer('build/'))
+        .pipe(gulp.dest('build/'));
+});
 
 // manage fonts Files
 gulp.task('fonts', function () {
     return gulp.src('src/styles/fonts/*.*')
         .pipe(newer('build/styles/fonts/'))
         .pipe(gulp.dest('build/styles/fonts/'));
+});
+
+gulp.task('sass', function () {
+  return gulp.src('src/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('build/css'));
 });
 
 // This task is used for building production ready minified JS/CSS files into
@@ -103,11 +110,13 @@ gulp.task('build', [
     .pipe(uglify())
     .pipe(gulp.dest('./dist/'));
 
+
+
   return merge(html, js);
 });
 
 gulp.task('default', [
-  'html', 'browserify'
+  'html', 'browserify', 'images', 'fonts', 'sass'
 ], function () {
 
   browserSync.init(['./build/**/**.**'], {
@@ -122,5 +131,7 @@ gulp.task('default', [
   gulp.watch("src/index.html", ['html']);
   gulp.watch(viewFiles, ['views']);
   gulp.watch(jsFiles, ['browserify']);
-  gulp.watch(images.in, ['images']);
+  gulp.watch('src/images/**/*.*', ['images']);
+  gulp.watch('src/styles/fonts/*.*', ['fonts']);
+  gulp.watch('src/sass/**/*.scss', ['sass']);
 });
