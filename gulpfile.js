@@ -1,21 +1,23 @@
-var gulp          = require('gulp');
-var notify        = require('gulp-notify');
-var source        = require('vinyl-source-stream');
-var browserify    = require('browserify');
-var babelify      = require('babelify');
-var ngAnnotate    = require('browserify-ngannotate');
-var browserSync   = require('browser-sync').create();
-var rename        = require('gulp-rename');
+var gulp = require('gulp');
+var notify = require('gulp-notify');
+var source = require('vinyl-source-stream');
+var browserify = require('browserify');
+var babelify = require('babelify');
+var ngAnnotate = require('browserify-ngannotate');
+var browserSync = require('browser-sync').create();
+var rename = require('gulp-rename');
 var templateCache = require('gulp-angular-templatecache');
-var uglify        = require('gulp-uglify');
-var merge         = require('merge-stream');
-var sass          = require('gulp-sass');
+var uglify = require('gulp-uglify');
+var merge = require('merge-stream');
+var sass = require('gulp-sass');
+var newer = require('gulp-newer');
+var imagemin = require('gulp-imagemin');
 
 // Where our files are located
 var jsFiles = "src/*/**/*.js";
 var viewFiles = "src/*/**/*.html";
 
-var interceptErrors = function (error) {
+var interceptErrors = function () {
   var args = Array
     .prototype
     .slice
@@ -30,6 +32,7 @@ var interceptErrors = function (error) {
   this.emit('end');
 };
 
+// build a bundle to serve it
 gulp.task('browserify', ['views'], function () {
   return browserify('./src/app.js').transform(babelify, {
     presets: [
@@ -52,6 +55,7 @@ gulp.task('browserify', ['views'], function () {
     .pipe(gulp.dest('./build/'));
 });
 
+// builds html files
 gulp.task('html', function () {
   return gulp
     .src("src/index.html")
@@ -68,32 +72,29 @@ gulp.task('views', function () {
     .pipe(gulp.dest('./src/*/config/'));
 });
 
-// manage images
-gulp.task('images', ['favicon'], function () {
-    return gulp.src('src/images/**/*.*')
-        .pipe(newer('build/images/'))
-        .pipe(imagemin())
-        .pipe(gulp.dest('build/images/'));
+// builds images images
+gulp.task('images', function () {
+  return gulp
+    .src('src/images/**/*.*')
+    .pipe(newer('build/images/'))
+    .pipe(imagemin())
+    .pipe(gulp.dest('build/images/'));
 });
 
-// manage favicon
-gulp.task('favicon', function () {
-    return gulp.src('src/favicon.ico')
-        .pipe(newer('build/'))
-        .pipe(gulp.dest('build/'));
-});
-
-// manage fonts Files
+// builds fonts Files
 gulp.task('fonts', function () {
-    return gulp.src('src/styles/fonts/*.*')
-        .pipe(newer('build/styles/fonts/'))
-        .pipe(gulp.dest('build/styles/fonts/'));
+  return gulp
+    .src('src/styles/fonts/*.*')
+    .pipe(newer('build/styles/fonts/'))
+    .pipe(gulp.dest('build/styles/fonts/'));
 });
 
-gulp.task('sass', function () {
-  return gulp.src('src/sass/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('build/css'));
+// builds sass
+gulp.task('sass', function () {
+  return gulp
+    .src('src/sass/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('build/css'));
 });
 
 // This task is used for building production ready minified JS/CSS files into
@@ -110,9 +111,22 @@ gulp.task('build', [
     .pipe(uglify())
     .pipe(gulp.dest('./dist/'));
 
+  var images = gulp
+    .src('build/images/**/*.*')
+    .pipe(newer('dist/images/'))
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/images/'));
 
+  var fonts = gulp
+    .src('build/styles/fonts/*.*')
+    .pipe(newer('dist/styles/fonts/'))
+    .pipe(gulp.dest('dist/styles/fonts/'));
 
-  return merge(html, js);
+  var css = gulp.src('build/app.css')
+        .pipe(newer('dist/app.css'))
+        .pipe(gulp.dest('dist/app.css'));
+
+  return merge(html, js, images, fonts, css);
 });
 
 gulp.task('default', [
