@@ -8,6 +8,5 @@ const requires = [
 
 // eslint-disable-next-line no-console
 console.log("est webpack");
-debugger;
 
-angular.module('musicSearch', requires);
+angular.module('app', requires);

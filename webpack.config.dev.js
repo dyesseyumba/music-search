@@ -15,12 +15,11 @@ export default {
     ]
   },
 
-  entry : {
-    app: ['./src/app.js']
-  },
+  entry : [
+    'src/app.js', 'src/sass/app.scss'
+  ],
 
   target : 'web',
-  // entry: ['./app/app.js'],
   output : {
     path: path.resolve(__dirname, 'src'),
     publicPath: '/',
@@ -28,10 +27,8 @@ export default {
     pathinfo: true
   },
 
-  // output: {   path: path.join(__dirname, 'dist'),   filename: 'bundle.js' },
-
   plugins : [
-    new HtmlWebpackPlugin({template: 'src/index.html', inject: 'body'}),
+    new HtmlWebpackPlugin({template: 'src/index.html', inject: true}),
     new webpack.NoEmitOnErrorsPlugin()
   ],
 
@@ -41,6 +38,18 @@ export default {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader"
+      }, {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: "style-loader"
+          }, {
+            loader: "css-loader"
+
+          }, {
+            loader: "fast-sass-loader"
+          }
+        ]
       }
     ]
   }
