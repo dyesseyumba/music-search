@@ -94,7 +94,7 @@ gulp.task('sass', function () {
   return gulp
     .src('src/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest('build/styles'));
 });
 
 // This task is used for building production ready minified JS/CSS files into
@@ -123,8 +123,8 @@ gulp.task('build', [
     .pipe(gulp.dest('dist/styles/fonts/'));
 
   var css = gulp.src('build/app.css')
-        .pipe(newer('dist/app.css'))
-        .pipe(gulp.dest('dist/app.css'));
+        .pipe(newer('dist/styles/app.css'))
+        .pipe(gulp.dest('dist/styles/app.css'));
 
   return merge(html, js, images, fonts, css);
 });
