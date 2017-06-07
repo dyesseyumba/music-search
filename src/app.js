@@ -6,7 +6,4 @@ const requires = [
   'ui.router'
 ];
 
-// eslint-disable-next-line no-console
-console.log("est webpack");
-
 angular.module('app', requires);

@@ -29,7 +29,6 @@ export default {
   },
 
   plugins : [
-    new webpack.ProvidePlugin({"window.jQuery": "jquery"}),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': '"production"'

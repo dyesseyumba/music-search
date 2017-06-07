@@ -14,7 +14,7 @@ export default {
     ]
   },
   entry : [
-    'webpack-hot-middleware/client',
+    'webpack-hot-middleware/client/__what&reload=true',
     'src/app.js',
     'src/sass/app.scss'
   ],
@@ -28,9 +28,8 @@ export default {
 
   plugins : [
     new HtmlWebpackPlugin({template: 'src/index.html', inject: true}),
-    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.ProvidePlugin({"window.jQuery": "jquery"}),
+    new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': '"development"'
