@@ -6,4 +6,7 @@ const requires = [
   'ui.router'
 ];
 
-angular.module('musicSearch', requires);
+// eslint-disable-next-line no-console
+console.log("est webpack");
+
+angular.module('app', requires);
