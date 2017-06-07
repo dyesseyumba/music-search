@@ -2,6 +2,8 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var SimpleProgressPlugin = require('webpack-simple-progress-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var WebpackMd5Hash = require('webpack-md5-hash');
 
 export default {
   devtool : 'source-map',
@@ -14,32 +16,54 @@ export default {
     ]
   },
   entry : [
-    'webpack-hot-middleware/client',
-    'src/app.js',
-    'src/sass/app.scss'
+    'src/app.js', 'src/sass/app.scss'
   ],
   target : 'web',
   output : {
-    path: path.resolve(__dirname, 'src'),
+    path: __dirname + '/dist',
     publicPath: '/',
-    filename: 'bundle.js',
-    pathinfo: true
+    filename: '[name].[chunkhash].js'
+  },
+  devServer : {
+    contentBase: './dist'
   },
 
   plugins : [
-    new HtmlWebpackPlugin({template: 'src/index.html', inject: true}),
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.ProvidePlugin({"window.jQuery": "jquery"}),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': '"development"'
+        'NODE_ENV': '"production"'
       }
     }),
+    new SimpleProgressPlugin(),
     new webpack
       .optimize
-      .OccurrenceOrderPlugin(true),
-    new SimpleProgressPlugin()
+      .OccurrenceOrderPlugin(),
+    new webpack
+      .optimize
+      .UglifyJsPlugin({
+        compress: {
+          drop_console: true
+        }
+      }),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeRedundantAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true
+      },
+      inject: true
+    }),
+    new ExtractTextPlugin('styles/app.[chunkhash].css'),
+    new WebpackMd5Hash()
   ],
 
   module : {
@@ -50,18 +74,17 @@ export default {
         loader: "babel-loader"
       }, {
         test: /\.scss$/,
-        use: [
-          {
-            loader: "style-loader"
-          }, {
-            loader: "css-loader",
-            options: {
-              sourceMap: true
+        use: ExtractTextPlugin.extract({
+          use: [
+            {
+              loader: "css-loader"
+            }, {
+              loader: "fast-sass-loader"
             }
-          }, {
-            loader: "fast-sass-loader"
-          }
-        ]
+          ],
+          // use style-loader in development
+          fallback: "style-loader"
+        })
       }, {
         test: /\.eot(\?.*)?$/,
         loader: 'file-loader?name=fonts/[hash].[ext]'

@@ -72,4 +72,6 @@ typings/
 # End of https://www.gitignore.io/api/node,visualstudiocode
 
 yarn.lock
-build
+build/
+dist/
+package-lock.json
