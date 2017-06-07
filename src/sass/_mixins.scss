@@ -18,5 +18,11 @@
 	&:after {
 		clear: both;
 	}
+}
 
+
+//Elements
+@mixin centered-image {
+  display: block;
+  margin: 0 auto;
 }
