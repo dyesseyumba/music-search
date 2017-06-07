@@ -14,9 +14,7 @@ export default {
     ]
   },
   entry : [
-    'webpack-hot-middleware/client/__what&reload=true',
-    'src/app.js',
-    'src/sass/app.scss'
+    'webpack-hot-middleware/client', 'src/app.js', 'src/sass/app.scss'
   ],
   target : 'web',
   output : {
@@ -48,6 +46,16 @@ export default {
         exclude: /node_modules/,
         loader: "babel-loader"
       }, {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              attrs: ['img:src', 'link:href']
+            }
+          }
+        ]
+      }, {
         test: /\.scss$/,
         use: [
           {
@@ -69,15 +77,18 @@ export default {
         loader: 'file-loader?name=fonts/[hash].[ext]'
       }, {
         test: /\.ttf(\?.*)?$/,
-        loader: 'url-loader?limit=10000&mimetype=application/octet-stream&name=fonts/[hash].[ext]'
+        loader: 'url-loader?limit=1000&mimetype=application/octet-stream&name=fonts/[hash].[ext]'
       }, {
         test: /\.svg(\?.*)?$/,
-        loader: 'url-loader?limit=10000&mimetype=image/svg+xml&name=fonts/[hash].[ext]'
+        loader: 'url-loader?limit=1000&mimetype=image/svg+xml&name=fonts/[hash].[ext]'
       }, {
-        test: /\.(jpe?g|png|gif|ico)$/i,
-        include: path.resolve('./src'),
+        test: /\.(jpe?g|png|gif)(\?.*)?$/i,
         exclude: /node_modules/,
-        loader: 'url-loader?limit=10000&name=images/[hash].[ext]'
+        loader: 'url-loader?limit=1000&name=images/[name].[hash].[ext]'
+      }, {
+        test:  /\.ico$/,
+        exclude: /node_modules/,
+        loader: 'url-loader?limit=1000&name=[name].[ext]'
       }
     ]
   }

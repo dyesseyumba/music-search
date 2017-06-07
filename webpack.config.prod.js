@@ -72,6 +72,17 @@ export default {
         exclude: /node_modules/,
         loader: "babel-loader"
       }, {
+        test: /\.html$/,
+        use: [
+          {
+            loader: 'html-loader',
+            options: {
+              attrs: ['img:src', 'link:href'],
+              minify: true
+            }
+          }
+        ]
+      }, {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
           use: [
@@ -86,21 +97,25 @@ export default {
         })
       }, {
         test: /\.eot(\?.*)?$/,
-        loader: 'file-loader?name=fonts/[hash].[ext]'
+        loader: 'file-loader?name=fonts/[name].[ext]'
       }, {
         test: /\.(woff|woff2)(\?.*)?$/,
-        loader: 'file-loader?name=fonts/[hash].[ext]'
+        loader: 'file-loader?name=fonts/[name].[ext]'
       }, {
         test: /\.ttf(\?.*)?$/,
-        loader: 'url-loader?limit=10000&mimetype=application/octet-stream&name=fonts/[hash].[ext]'
+        loader: 'url-loader?limit=1000&mimetype=application/octet-stream&name=styles/fonts/[name' +
+            '].[ext]'
       }, {
         test: /\.svg(\?.*)?$/,
-        loader: 'url-loader?limit=10000&mimetype=image/svg+xml&name=fonts/[hash].[ext]'
+        loader: 'url-loader?limit=1000&mimetype=image/svg+xml&name=fonts/[hash].[ext]'
       }, {
-        test: /\.(jpe?g|png|gif|ico)$/i,
-        include: path.resolve('./src'),
+        test: /\.(jpe?g|png|gif)(\?.*)?$/i,
         exclude: /node_modules/,
-        loader: 'url-loader?limit=10000&name=images/[hash].[ext]'
+        loader: 'url-loader?limit=1000&name=images/[name].[hash].[ext]'
+      }, {
+        test: /\.ico(\?.*)?$/,
+        exclude: /node_modules/,
+        loader: 'url-loader?limit=1000&mimetype=image/x-icon&name=./[name].[ext]'
       }
     ]
   }
