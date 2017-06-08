@@ -103,8 +103,7 @@ export default {
         loader: 'file-loader?name=fonts/[name].[ext]'
       }, {
         test: /\.ttf(\?.*)?$/,
-        loader: 'url-loader?limit=1000&mimetype=application/octet-stream&name=styles/fonts/[name' +
-            '].[ext]'
+        loader: 'url-loader?limit=1000&mimetype=application/octet-stream&name=styles/fonts/[name].[ext]'
       }, {
         test: /\.svg(\?.*)?$/,
         loader: 'url-loader?limit=1000&mimetype=image/svg+xml&name=fonts/[hash].[ext]'
