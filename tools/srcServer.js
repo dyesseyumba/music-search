@@ -14,7 +14,10 @@ const compiler = webpack(config);
 
 app.use(webpackMiddleware(compiler, {
   //noInfo: true,
-  publicPath: config.output.publicPath
+  publicPath: config.output.publicPath,
+  stats: {
+    colors: true
+  }
 }));
 app.use(require("webpack-hot-middleware")(compiler));
 

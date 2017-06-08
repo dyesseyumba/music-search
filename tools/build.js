@@ -15,7 +15,7 @@ webpack(webpackConfig).run((err, stats) => {
     return 1;
   }
 
-  const jsonStats = stats.toJson();
+  const jsonStats = stats.toJson({colors: true});
 
   if (jsonStats.hasErrors) {
     return jsonStats.errors.map(error => console.log(error.red));
