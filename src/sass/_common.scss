@@ -60,16 +60,14 @@ input[type=search] {
 }
 
 #gl-logo {
-
-  @media (min-width: 320px) {
+  @media screen and (min-width: 0px) {
     background-image: url('../images/gl-logo-sm.png');
     background-size: 40px 40px;
     margin: 15px 0 0 20px;
     height: 40px;
     width: 40px;
   }
-
-  @media (min-width: 768px) {
+  @media screen and (min-width: 720px) {
     background-image: url('../images/gl-logo@2x.png');
     background-size: 80px 100px;
     margin: 35px 0 0 43px;
@@ -85,7 +83,12 @@ input[type=search] {
   width: 100%;
   margin-top: -40px;
   img {
-    @include centered-image;
+    @media screen and (min-width: 0px) {
+      margin: 9rem 0 5rem 0;
+    }
+    @media screen and (min-width: 720px) {
+      margin: 0;
+    }
   }
 }
 
@@ -150,4 +153,11 @@ input[type=search] {
     font-size: 24px;
     margin: 35px 0 35px 0
   }
+}
+
+// Image
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
