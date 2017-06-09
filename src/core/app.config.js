@@ -5,7 +5,7 @@
  * @param {any} $urlRouterProvider
  * @param {any} $locationProvider
  */
-const AppConfig = ($stateProvider, $urlRouterProvider) => {
+const AppConfig = (AppConstants, $stateProvider, $urlRouterProvider) => {
   'ngInject';
 
   //Remove hash bang routing
@@ -18,18 +18,13 @@ const AppConfig = ($stateProvider, $urlRouterProvider) => {
     name: 'musicList',
     url: '/',
     component: 'musicList',
-    data:{title: 'Home'}
+    data: {
+      pageTitle: 'Home - ' + AppConstants.appName
+    }
   }
 
-  const testState = {
-    name: 'testState',
-    url: '/test',
-    template: '<h1>Test</h1>',
-     data:{title: 'Home 2'}
-  }
 
   $stateProvider.state(musicListState);
-  $stateProvider.state(testState);
 
   $urlRouterProvider.otherwise('/');
 }

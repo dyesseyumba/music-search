@@ -4,10 +4,11 @@
  * @param {any} AppConstants
  * @param {any} $rootScope
  */
-const AppRun = (AppConstants) => {
+const AppRun = ($rootScope, $state, $stateParams) => {
   'ngInject';
 
-  //To do implement dynamique page title.
+  $rootScope.$state = $state;
+  $rootScope.$stateParams = $stateParams;
 
 }
 
