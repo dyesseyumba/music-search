@@ -6,8 +6,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var WebpackMd5Hash = require('webpack-md5-hash');
 
 export default {
-  devtool : 'source-map',
-  resolve : {
+  devtool: 'source-map',
+  resolve: {
     extensions: ['.js'],
     modules: [
       path.resolve(__dirname),
@@ -15,20 +15,20 @@ export default {
       'src'
     ]
   },
-  entry : [
+  entry: [
     'src/app.js', 'src/sass/app.scss'
   ],
-  target : 'web',
-  output : {
+  target: 'web',
+  output: {
     path: __dirname + '/dist',
     publicPath: '/',
     filename: '[name].[chunkhash].js'
   },
-  devServer : {
+  devServer: {
     contentBase: './dist'
   },
 
-  plugins : [
+  plugins: [
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': '"production"'
@@ -36,15 +36,15 @@ export default {
     }),
     new SimpleProgressPlugin(),
     new webpack
-      .optimize
-      .OccurrenceOrderPlugin(),
+    .optimize
+    .OccurrenceOrderPlugin(),
     new webpack
-      .optimize
-      .UglifyJsPlugin({
-        compress: {
-          drop_console: true
-        }
-      }),
+    .optimize
+    .UglifyJsPlugin({
+      compress: {
+        drop_console: true
+      }
+    }),
     new HtmlWebpackPlugin({
       template: 'src/index.html',
       minify: {
@@ -65,57 +65,60 @@ export default {
     new WebpackMd5Hash()
   ],
 
-  module : {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "babel-loader"
-      }, {
-        test: /\.html$/,
-        use: [
-          {
-            loader: 'html-loader',
-            options: {
-              attrs: ['img:src', 'link:href'],
-              minify: true
-            }
+  module: {
+    rules: [{
+      test: /\.js$/,
+      exclude: /node_modules/,
+      use: [{
+          loader: 'ng-annotate-loader',
+          options: {
+            add: true
           }
-        ]
-      }, {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: "css-loader"
-            }, {
-              loader: "fast-sass-loader"
-            }
-          ],
-          // use style-loader in development
-          fallback: "style-loader"
-        })
-      }, {
-        test: /\.eot(\?.*)?$/,
-        loader: 'file-loader?name=fonts/[name].[hash].[ext]'
-      }, {
-        test: /\.(woff|woff2)(\?.*)?$/,
-        loader: 'file-loader?name=fonts/[name].[hash].[ext]'
-      }, {
-        test: /\.ttf(\?.*)?$/,
-        loader: 'url-loader?limit=1000&mimetype=application/octet-stream&name=styles/fonts/[name].[hash].[ext]'
-      }, {
-        test: /\.svg(\?.*)?$/,
-        loader: 'url-loader?limit=1000&mimetype=image/svg+xml&name=fonts/[hash].[hash].[ext]'
-      }, {
-        test: /\.(jpe?g|png|gif)(\?.*)?$/i,
-        exclude: /node_modules/,
-        loader: 'url-loader?limit=1000&name=images/[name].[hash].[ext]'
-      }, {
-        test: /\.ico(\?.*)?$/,
-        exclude: /node_modules/,
-        loader: 'url-loader?limit=1000&mimetype=image/x-icon&name=./[name].[hash].[ext]'
-      }
-    ]
+        },
+        {
+          loader: 'babel-loader'
+        },
+      ]
+    }, {
+      test: /\.html$/,
+      use: [{
+        loader: 'html-loader',
+        options: {
+          attrs: ['img:src', 'link:href'],
+          minify: true
+        }
+      }]
+    }, {
+      test: /\.scss$/,
+      use: ExtractTextPlugin.extract({
+        use: [{
+          loader: "css-loader"
+        }, {
+          loader: "fast-sass-loader"
+        }],
+        // use style-loader in development
+        fallback: "style-loader"
+      })
+    }, {
+      test: /\.eot(\?.*)?$/,
+      loader: 'file-loader?name=fonts/[name].[hash].[ext]'
+    }, {
+      test: /\.(woff|woff2)(\?.*)?$/,
+      loader: 'file-loader?name=fonts/[name].[hash].[ext]'
+    }, {
+      test: /\.ttf(\?.*)?$/,
+      loader: 'url-loader?limit=1000&mimetype=application/octet-stream&name=styles/fonts/[name].[hash].[ext]'
+    }, {
+      test: /\.svg(\?.*)?$/,
+      loader: 'url-loader?limit=1000&mimetype=image/svg+xml&name=fonts/[hash].[hash].[ext]'
+    }, {
+      test: /\.(jpe?g|png|gif)(\?.*)?$/i,
+      exclude: /node_modules/,
+      loader: 'url-loader?limit=1000&name=images/[name].[hash].[ext]'
+    }, {
+      test: /\.ico(\?.*)?$/,
+      exclude: /node_modules/,
+      loader: 'url-loader?limit=1000&mimetype=image/x-icon&name=./[name].[hash].[ext]'
+    }]
   }
 };

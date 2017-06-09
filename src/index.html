@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="app" ng-strict-dio>
 
 <head>
   <meta charset="UTF-8">
@@ -11,15 +11,11 @@
 
 <body>
 
-  <!--jumbotron-->
   <jumbotron></jumbotron>
-  <!--End jumbotron-->
 
-  <!--Search box-->
   <search-box></search-box>
-  <!--end search box-->
 
-  <result></result>
+  <div ui-view></div>
 
   <app-footer></app-footer>
 
