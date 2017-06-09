@@ -97,16 +97,16 @@ export default {
         })
       }, {
         test: /\.eot(\?.*)?$/,
-        loader: 'file-loader?name=fonts/[name].[ext]'
+        loader: 'file-loader?name=fonts/[name].[hash].[ext]'
       }, {
         test: /\.(woff|woff2)(\?.*)?$/,
-        loader: 'file-loader?name=fonts/[name].[ext]'
+        loader: 'file-loader?name=fonts/[name].[hash].[ext]'
       }, {
         test: /\.ttf(\?.*)?$/,
-        loader: 'url-loader?limit=1000&mimetype=application/octet-stream&name=styles/fonts/[name].[ext]'
+        loader: 'url-loader?limit=1000&mimetype=application/octet-stream&name=styles/fonts/[name].[hash].[ext]'
       }, {
         test: /\.svg(\?.*)?$/,
-        loader: 'url-loader?limit=1000&mimetype=image/svg+xml&name=fonts/[hash].[ext]'
+        loader: 'url-loader?limit=1000&mimetype=image/svg+xml&name=fonts/[hash].[hash].[ext]'
       }, {
         test: /\.(jpe?g|png|gif)(\?.*)?$/i,
         exclude: /node_modules/,
@@ -114,7 +114,7 @@ export default {
       }, {
         test: /\.ico(\?.*)?$/,
         exclude: /node_modules/,
-        loader: 'url-loader?limit=1000&mimetype=image/x-icon&name=./[name].[ext]'
+        loader: 'url-loader?limit=1000&mimetype=image/x-icon&name=./[name].[hash].[ext]'
       }
     ]
   }
