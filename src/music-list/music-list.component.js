@@ -1,5 +1,9 @@
 const template = require('./music-list.html');
 
-const musicList = {template};
+const musicList = {
+  controller: 'MusicListController',
+  controllerAs: '$musicList',
+  template
+};
 
 export default musicList;
