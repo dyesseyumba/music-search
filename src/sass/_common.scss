@@ -18,7 +18,11 @@ input[type=search] {
     line-height: 45px;
     width: 100%;
   }
-  @media screen and (min-width: 30em) {
+  @media screen and (min-width: 720px) {
+    line-height: 50px;
+    width: 430px;
+  }
+  @media screen and (min-width: 960px) {
     line-height: 50px;
     width: 630px;
   }
@@ -52,7 +56,7 @@ input[type=search] {
 //jumbotron
 #jumbotron {
   @media screen and (min-width: 768px) {
-    margin: 0 2rem 0 2rem;
+    margin: 0 40px 0 40px;
   }
 }
 
@@ -115,10 +119,10 @@ input[type=search] {
 #search-box {
   text-align: center;
   @media screen and (min-width: 0) {
-    margin: 0 1rem 1rem 1rem;
+    padding: 0 1rem 1rem 1rem;
   }
-  @media screen and (min-width:30em) {
-    margin: 0 2rem 0 2rem;
+  @media screen and (min-width:40em) {
+    margin: 0 40px 0 40px;
   }
   input[type=search],
   input[type=submit] {
@@ -136,10 +140,10 @@ input[type=search] {
     border: 0;
     cursor: pointer;
     @media screen and (min-width: 0) {
-      width: 180px;
+      width: 120px;
       margin-top: -7px;
     }
-    @media screen and (min-width: 30em) {
+    @media screen and (min-width: 40em) {
       width: 120px;
       margin-top: -2px;
       margin-left: -128px;
