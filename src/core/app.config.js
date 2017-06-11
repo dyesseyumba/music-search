@@ -8,12 +8,6 @@
 const AppConfig = (AppConstants, $stateProvider, $urlRouterProvider) => {
   'ngInject';
 
-  //Remove hash bang routing
-  // $locationProvider.html5Mode({
-  //   enabled: true,
-  //   requireBase: false
-  // });
-
   const musicListState = {
     name: 'musicList',
     url: '/',
@@ -23,8 +17,18 @@ const AppConfig = (AppConstants, $stateProvider, $urlRouterProvider) => {
     }
   }
 
+  const musicItemState = {
+    name: 'musicItem',
+    url: '/search',
+    component: 'musicItem',
+    data: {
+      pageTitle: 'Search - ' + AppConstants.appName
+    }
+  }
+
 
   $stateProvider.state(musicListState);
+  $stateProvider.state(musicItemState);
 
   $urlRouterProvider.otherwise('/');
 }
