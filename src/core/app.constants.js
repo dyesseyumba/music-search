@@ -1,14 +1,6 @@
-//Contant of all application
+//Constants of whole application
 const AppConstants = {
-
-  appName: 'Music Search',
-  actionTypes: {
-    loadMuSics: 'LOAD_MUSICS'
-  },
-  initialState: {
-    musics: [],
-    accessToken: null
-  }
+  appName: 'Music Search'
 }
 
 export default AppConstants;

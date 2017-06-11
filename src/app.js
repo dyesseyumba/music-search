@@ -1,6 +1,5 @@
 import angular from 'angular';
 import 'angular-ui-router';
-import 'ng-redux';
 
 // Import our app config files
 import constants from './core/app.constants';
@@ -14,7 +13,6 @@ import './music-list';
 // Create and bootstrap application
 const requires = [
   'ui.router',
-  'ngRedux',
   'layout',
   'music-list'
 ];
