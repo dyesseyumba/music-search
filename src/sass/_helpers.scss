@@ -1,0 +1,33 @@
+
+//Colors
+.bg-pink-jumbotron {
+  background: linear-gradient(#CD4282, #B3455D);
+}
+
+.bg-black-search-box {
+  background-color: #333441;
+}
+
+.bg-black-result {
+  background-color: #383A49!important;
+}
+
+.fg-black-text-result {
+  color: #474958;
+}
+
+.fg-white {
+  color: #FFFFFF;
+}
+
+
+//Show/Hide element regarding screen size
+.visible-md {
+  display: none !important
+}
+
+@media (min-width: 30rem) {
+  .visible-md {
+    display: block !important
+  }
+}

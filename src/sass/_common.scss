@@ -32,41 +32,6 @@ input[type=search] {
   }
 }
 
-//Colors
-.bg-pink-jumbotron {
-  background: linear-gradient(#CD4282, #B3455D);
-}
-
-.bg-black-search-box {
-  background-color: #333441;
-}
-
-.bg-black-result {
-  background-color: #383A49!important;
-}
-
-.fg-black-text-result {
-  color: #474958;
-}
-
-.fg-white {
-  color: #FFFFFF;
-}
-
-//Search results
-.item-label {
-  background: #FFFFFF;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  padding-left: 1rem;
-  border-radius: 0 0 5px 5px
-}
-
-.img-item-label {
-  border-radius: 5px 5px 0 0
-}
-
 //jumbotron
 #jumbotron {
   @media screen and (min-width: 30em) {
@@ -202,17 +167,23 @@ input[type=search] {
   display: block;
 }
 
-//Show/Hide element regarding screen size
-.visible-md {
-  display: none !important
+
+//Search results
+.item-label {
+  background: #FFFFFF;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  border-radius: 0 0 5px 5px;
+  font-family: $fontNameBold;
 }
 
-@media (min-width: 30rem) {
-  .visible-md {
-    display: block !important
-  }
+.img-item-label {
+  border-radius: 5px 5px 0 0
 }
 
+//Button
 .btn {
   @include button-common;
   font-family: $fontNameBold;
