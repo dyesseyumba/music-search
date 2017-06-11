@@ -22,7 +22,21 @@
 
 
 //Elements
+//Center image and add fluidity
 @mixin centered-image {
   display: block;
   margin: 0 auto;
+}
+
+@mixin button-common {
+
+    outline: none;
+    background: #D05D84;
+    border-radius: 28px;
+    color: #ffffff;
+    border: 0;
+    cursor: pointer;
+    &:hover {
+      background: lighten(#D05D84, 5%);
+    }
 }

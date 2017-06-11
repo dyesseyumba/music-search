@@ -75,3 +75,4 @@ yarn.lock
 build/
 dist/
 package-lock.json
+toDelete.png

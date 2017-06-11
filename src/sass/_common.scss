@@ -53,6 +53,20 @@ input[type=search] {
   color: #FFFFFF;
 }
 
+//Search results
+.item-label {
+  background: #FFFFFF;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  border-radius: 0 0 5px 5px
+}
+
+.img-item-label {
+  border-radius: 5px 5px 0 0
+}
+
 //jumbotron
 #jumbotron {
   @media screen and (min-width: 30em) {
@@ -122,7 +136,8 @@ input[type=search] {
     padding: 0 1rem 1rem 1rem;
   }
   @media screen and (min-width:40em) {
-    margin: 0 2rem 0 2rem;;
+    margin: 0 2rem 0 2rem;
+    ;
   }
   input[type=search],
   input[type=submit] {
@@ -130,15 +145,9 @@ input[type=search] {
     font-size: $baseFontSize;
   }
   input[type=submit] {
-    outline: none;
+    @include button-common;
     height: 43px;
     padding: 10px 20px 10px 20px;
-    background: #D05D84;
-    border-radius: 28px;
-    color: #ffffff;
-    padding: 10px 20px 10px 20px;
-    border: 0;
-    cursor: pointer;
     @media screen and (min-width: 0) {
       width: 120px;
       margin-top: -7px;
@@ -153,16 +162,12 @@ input[type=search] {
       position: relative;
       top: 1px;
     }
-    &:hover {
-      background: lighten(#D05D84, 5%);
-    }
   }
 }
 
 // Results box
 #search-result {
-  margin: 0 2rem 0 2rem;
-  // padding: 4rem 0 3rem 0;
+  margin: 0 2rem 0 2rem; // padding: 4rem 0 3rem 0;
   @media screen and (min-width: 0) and (max-width: 31em) {
     img {
       width: 80px;
@@ -197,6 +202,7 @@ input[type=search] {
   display: block;
 }
 
+//Show/Hide element regarding screen size
 .visible-md {
   display: none !important
 }
@@ -205,4 +211,17 @@ input[type=search] {
   .visible-md {
     display: block !important
   }
+}
+
+.btn {
+  @include button-common;
+  font-family: $fontNameBold;
+  font-size: $baseFontSize;
+  height: 43px;
+  padding: 10px 20px 10px 20px;
+
+    &:active {
+      position: relative;
+      top: 1px;
+    }
 }
