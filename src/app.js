@@ -9,12 +9,14 @@ import appRun from './core/app.run';
 // Import our app functionality
 import './layout';
 import './music-list';
+import './services';
 
 // Create and bootstrap application
 const requires = [
   'ui.router',
   'layout',
-  'music-list'
+  'music-list',
+  'custom-services'
 ];
 
 angular.module('app', requires);
