@@ -167,7 +167,6 @@ input[type=search] {
   display: block;
 }
 
-
 //Search results
 .item-label {
   background: #FFFFFF;
@@ -180,7 +179,14 @@ input[type=search] {
 }
 
 .img-item-label {
-  border-radius: 5px 5px 0 0
+  border-radius: 5px 5px 0 0;
+}
+
+.img-item-icon {
+  width: 10%;
+  margin-top: -40px;
+  margin-left: 15px;
+  position: absolute;
 }
 
 //Button
@@ -190,9 +196,8 @@ input[type=search] {
   font-size: $baseFontSize;
   height: 40px;
   padding: 10px 20px 10px 20px;
-
-    &:active {
-      position: relative;
-      top: 1px;
-    }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
 }
