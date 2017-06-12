@@ -1,4 +1,3 @@
-
 //Colors
 .bg-pink-jumbotron {
   background: linear-gradient(#CD4282, #B3455D);
@@ -20,7 +19,6 @@
   color: #FFFFFF;
 }
 
-
 //Show/Hide element regarding screen size
 .visible-md {
   display: none !important
@@ -30,4 +28,10 @@
   .visible-md {
     display: block !important
   }
+}
+
+//Center block element
+.center-block {
+  display: flex;
+  justify-content: center;
 }

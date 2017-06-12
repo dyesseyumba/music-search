@@ -188,7 +188,7 @@ input[type=search] {
   @include button-common;
   font-family: $fontNameBold;
   font-size: $baseFontSize;
-  height: 43px;
+  height: 40px;
   padding: 10px 20px 10px 20px;
 
     &:active {
