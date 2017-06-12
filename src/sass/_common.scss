@@ -97,12 +97,12 @@ input[type=search] {
 // Search box
 #search-box {
   text-align: center;
-  @media screen and (min-width: 0) {
+  @media screen and (min-width: 0) and (max-width: 39em) {
     padding: 0 1rem 1rem 1rem;
+    margin-bottom: 1.5rem;
   }
   @media screen and (min-width:40em) {
     margin: 0 2rem 0 2rem;
-    ;
   }
   input[type=search],
   input[type=submit] {
@@ -132,7 +132,7 @@ input[type=search] {
 
 // Results box
 #search-result {
-  margin: 0 2rem 0 2rem; // padding: 4rem 0 3rem 0;
+  margin: 0 2rem 0 2rem;
   @media screen and (min-width: 0) and (max-width: 31em) {
     img {
       width: 80px;
@@ -170,16 +170,27 @@ input[type=search] {
 //Search results
 .item-label {
   background: #FFFFFF;
-  height: 60px;
   display: flex;
   align-items: center;
   padding-left: 1rem;
-  border-radius: 0 0 5px 5px;
   font-family: $fontNameBold;
+  @media screen and (max-width: 30rem) {
+    height: 70px;
+    border-radius: 0 5px 5px 0;
+  }
+  @media screen and (min-width: 31rem) {
+    height: 60px;
+    border-radius: 0 0 5px 5px;
+  }
 }
 
 .img-item-label {
-  border-radius: 5px 5px 0 0;
+  @media screen and (max-width: 30rem) {
+    border-radius: 5px 0 0 5px;
+  }
+  @media screen and (min-width: 31rem) {
+    border-radius: 5px 5px 0 0;
+  }
 }
 
 .img-item-icon {
@@ -187,6 +198,14 @@ input[type=search] {
   margin-top: -40px;
   margin-left: 15px;
   position: absolute;
+}
+
+.item-block {
+  position: relative;
+  @media screen and (max-width: 30rem) {
+    float:left;
+    width: 70px
+  }
 }
 
 //Button
