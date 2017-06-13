@@ -6,7 +6,7 @@ import appFooter from './footer.component';
 
 //Define module 'layout' and its component
 angular
-  .module('layout', [])
+  .module('app.layout', [])
   .component('jumbotron', jumbotron)
   .component('searchBox', searchBox)
   .component('result', result)

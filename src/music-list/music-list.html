@@ -1,1 +1,66 @@
-<result></result>
+<section>
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-3" ng-repeat="result in $ctrl.spotifyResults">
+        <div class="item-block">
+          <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
+          <img class="img-fluid img-item-icon" src="../images/artist-icon@2x.png" alt="Spotify item" />
+        </div>
+        <div class="item-label">
+          <span ng-bind="result.name"></span>
+        </div>
+      </div>
+
+      <div id="myBtn"  class="col-3">
+        <div class="item-block">
+          <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
+          <img class="img-fluid img-item-icon" src="../images/album-icon.png" alt="Spotify item" />
+        </div>
+        <div class="item-label">
+          <span>Alberta Clark</span>
+        </div>
+      </div>
+      <!--<div class="col-3">
+        <div class="item-block">
+          <img class="img-fluid img-item-label" style="filter: blur(5px);" src="../images/toDelete.png" alt="Spotify item">
+          <img class="img-fluid" style="width: 50%; margin-top: -160px; margin-left:60px;  position: absolute; " src="../images/vynil.png" alt="Spotify item"
+          />
+        </div>
+        <div class="item-label">
+          <span>Alberta Clark</span>
+        </div>
+      </div>-->
+    </div>
+    <div class="row center-block" style="padding: 1rem 0 1rem 0">
+      <button class="btn">
+        SHOW ME MORE!
+      </button>
+    </div>
+  </div>
+</section>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <section style="  position: relative;">
+
+      <img src="../images/toDelete2.png" style="width: 100%" alt="Artist">
+
+      <span class="close" style="position: absolute; margin-top: -42%; margin-left: 92%; ">&times;</span>
+      <h1 class="fg-white" style="text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF; position: absolute; margin-top: -9%; margin-left: 5%; ">Alberta Clark</h1>
+    </section>
+    <section style="margin: 5%">
+      <h3>Albums</h3>
+      <hr>
+      <article>
+        <div>
+          <img src="../images/toDelete3.png" style="width: 120px" alt="Track">
+        </div>
+      </article>
+
+    </section>
+  </div>
+</div>
+
+</div>

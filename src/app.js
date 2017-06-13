@@ -9,14 +9,18 @@ import appRun from './core/app.run';
 
 // Import our app functionality
 import './layout';
+import './home';
 import './music-list';
+import './music-detail';
 import './services';
 
 // Create and bootstrap application
 const requires = [
   'ui.router',
-  'layout',
-  'music-list',
+  'app.layout',
+  'app.home',
+  'app.music-list',
+  'app.music-detail',
   'custom-services'
 ];
 

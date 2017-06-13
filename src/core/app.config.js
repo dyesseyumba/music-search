@@ -8,27 +8,27 @@
 const AppConfig = (AppConstants, $stateProvider, $urlRouterProvider) => {
   'ngInject';
 
-  const musicListState = {
-    name: 'musicList',
+  const homeState = {
+    name: 'home',
     url: '/',
-    component: 'musicList',
+    component: 'home',
     data: {
       pageTitle: 'Home - ' + AppConstants.appName
     }
   }
 
-  const musicItemState = {
-    name: 'musicItem',
-    url: '/search',
-    component: 'musicItem',
+  const musicListState = {
+    name: 'musicList',
+    url: '/search/{value}',
+    component: 'musicList',
     data: {
       pageTitle: 'Search - ' + AppConstants.appName
     }
   }
 
 
+  $stateProvider.state(homeState);
   $stateProvider.state(musicListState);
-  $stateProvider.state(musicItemState);
 
   $urlRouterProvider.otherwise('/');
 }
