@@ -7,4 +7,4 @@ angular.module('custom-services', ['ngResource']);
 
 
 angular.module('custom-services')
-.factory('ApiFactory', ApiFactory);
+  .factory('ApiFactory', ['AppConstants', '$resource', (AppConstants, $resource) => new ApiFactory(AppConstants, $resource)]);

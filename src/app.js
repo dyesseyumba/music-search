@@ -1,4 +1,5 @@
 import angular from 'angular';
+import 'angular-resource';
 import 'angular-ui-router';
 
 // Import our app config files

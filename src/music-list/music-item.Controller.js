@@ -1,28 +1,15 @@
 class MusicItemController {
-  constructor($document) {
+  constructor(ApiFactory) {
     'ngInject';
-
-    // this.$onInit =$onInit;
-    //  debugger
-    //     var modal = $document.getElementById('myModal');
-    //     var btn = document.getElementById("myBtn");
-    //     var span = document.getElementsByClassName("close")[0];
-
-    //     // When the user clicks on the button, open the modal
-    //     btn.onclick = () => {
-
-    //       this.openModal(modal);
-    //     }
-
-    //     // When the user clicks on <span> (x), close the modal
-    //     span.onclick = () => {
-    //       this.closeModal(modal);
-    //     }
+    this._ApiFactory = ApiFactory;
   }
 
   $onInit() {
+
     // debugger
-    /* eslint-disable angular/document-service */
+
+    var results = this._ApiFactory.getByArtistOrAlbum().query();
+
     var modal = document.getElementById('myModal');
     var btn = document.getElementById("myBtn");
     var span = document.getElementsByClassName("close")[0];

@@ -7,7 +7,11 @@ class ApiFactory {
   }
 
   getByArtistOrAlbum() {
-    this._$resource('../_results/results.json');
+
+const results = this._AppConstants.getByArtistOrAlbumUri;
+
+// debugger
+    return this._$resource(results);
   }
 }
 
