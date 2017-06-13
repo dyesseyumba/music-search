@@ -1,14 +1,22 @@
+/**
+ * The music-item's controller
+ *
+ * @class MusicItemController
+ */
 class MusicItemController {
   constructor(ApiFactory) {
     'ngInject';
     this._ApiFactory = ApiFactory;
   }
 
+  /**
+   * Initialisation of MusicItemController
+   *
+   * @memberof MusicItemController
+   */
   $onInit() {
 
-    // debugger
-
-    var results = this._ApiFactory.getByArtistOrAlbum().query();
+    this.spotifyResults = this._ApiFactory.getByArtistOrAlbum().query();
 
     var modal = document.getElementById('myModal');
     var btn = document.getElementById("myBtn");

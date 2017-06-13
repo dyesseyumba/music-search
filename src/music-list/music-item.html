@@ -1,112 +1,17 @@
 <section>
   <div class="wrapper">
     <div class="row">
-      <div id="myBtn" class="col-3">
+      <div class="col-3" ng-repeat="result in $ctrl.spotifyResults">
         <div class="item-block">
           <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
           <img class="img-fluid img-item-icon" src="../images/artist-icon@2x.png" alt="Spotify item" />
         </div>
         <div class="item-label">
-          <span style="padding-top: 10px">Alberta Clark</span>
+          <span style="padding-top: 10px" ng-bind="result.name"></span>
         </div>
       </div>
 
-      <div class="col-3">
-        <div class="item-block">
-          <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
-          <img class="img-fluid img-item-icon" src="../images/album-icon.png" alt="Spotify item" />
-        </div>
-        <div class="item-label">
-          <span>Alberta Clark</span>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="item-block">
-          <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
-          <img class="img-fluid img-item-icon" src="../images/artist-icon@2x.png" alt="Spotify item" />
-        </div>
-        <div class="item-label">
-          <span style="padding-top: 10px">Alberta Clark</span>
-        </div>
-      </div>
-
-      <div class="col-3">
-        <div class="item-block">
-          <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
-          <img class="img-fluid img-item-icon" src="../images/album-icon.png" alt="Spotify item" />
-        </div>
-        <div class="item-label">
-          <span>Alberta Clark</span>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="item-block">
-          <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
-          <img class="img-fluid img-item-icon" src="../images/artist-icon@2x.png" alt="Spotify item" />
-        </div>
-        <div class="item-label">
-          <span style="padding-top: 10px">Alberta Clark</span>
-        </div>
-      </div>
-
-      <div class="col-3">
-        <div class="item-block">
-          <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
-          <img class="img-fluid img-item-icon" src="../images/album-icon.png" alt="Spotify item" />
-        </div>
-        <div class="item-label">
-          <span>Alberta Clark</span>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="item-block">
-          <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
-          <img class="img-fluid img-item-icon" src="../images/artist-icon@2x.png" alt="Spotify item" />
-        </div>
-        <div class="item-label">
-          <span style="padding-top: 10px">Alberta Clark</span>
-        </div>
-      </div>
-
-      <div class="col-3">
-        <div class="item-block">
-          <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
-          <img class="img-fluid img-item-icon" src="../images/album-icon.png" alt="Spotify item" />
-        </div>
-        <div class="item-label">
-          <span>Alberta Clark</span>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="item-block">
-          <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
-          <img class="img-fluid img-item-icon" src="../images/artist-icon@2x.png" alt="Spotify item" />
-        </div>
-        <div class="item-label">
-          <span style="padding-top: 10px">Alberta Clark</span>
-        </div>
-      </div>
-
-      <div class="col-3">
-        <div class="item-block">
-          <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
-          <img class="img-fluid img-item-icon" src="../images/album-icon.png" alt="Spotify item" />
-        </div>
-        <div class="item-label">
-          <span>Alberta Clark</span>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="item-block">
-          <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
-          <img class="img-fluid img-item-icon" src="../images/artist-icon@2x.png" alt="Spotify item" />
-        </div>
-        <div class="item-label">
-          <span style="padding-top: 10px">Alberta Clark</span>
-        </div>
-      </div>
-
-      <div class="col-3">
+      <div id="myBtn"  class="col-3">
         <div class="item-block">
           <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
           <img class="img-fluid img-item-icon" src="../images/album-icon.png" alt="Spotify item" />
@@ -149,9 +54,9 @@
       <h3>Albums</h3>
       <hr>
       <article>
-<div>
-<img src="../images/toDelete3.png" style="width: 120px" alt="Track">
-</div>
+        <div>
+          <img src="../images/toDelete3.png" style="width: 120px" alt="Track">
+        </div>
       </article>
 
     </section>
