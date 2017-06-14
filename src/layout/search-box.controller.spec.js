@@ -1,3 +1,5 @@
+// import 'angular-mocks';
+
 describe('SearchBoxController', function () {
 
   let $compile, $rootScope;

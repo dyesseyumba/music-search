@@ -2,18 +2,19 @@ module.exports = function (config) {
   config.set({
     basePath: './src',
     files: [
-      'node_modules/angular-mocks/angular-mocks.js',
-      'src/app.js',
+      '../node_modules/angular/angular.js',
+      '../node_modules/angular-mocks/angular-mocks.js',
+      './app.js',
       '**/*.spec.js'
     ],
     preprocessors: {
-      '**/*.js': 'coverage'
+      '**/*.js': 'karma-babel'
     },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    frameworks: ['jasmine', 'chai'],
+    frameworks: ['jasmine'],
     browsers: ['Chrome_no_sandbox'],
     customLaunchers: {
       Chrome_no_sandbox: {
@@ -21,11 +22,12 @@ module.exports = function (config) {
         flags: ['--no-sandbox']
       }
     },
-    reporters: ['mocha', 'coverage'],
+    reporters: ['mocha'],
     plugins: [
       'karma-chrome-launcher',
-      'karma-firefox-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-mocha-reporter'
+
     ],
     singleRun: true,
     concurrency: Infinity
