@@ -74,6 +74,6 @@ typings/
 yarn.lock
 build/
 dist/
-package-lock.json
+#package-lock.json
 toDelete.*
 toDelete?.*
