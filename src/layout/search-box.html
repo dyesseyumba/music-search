@@ -1,4 +1,4 @@
-<div id="search-box" class="bg-black-search-box" ng-cloak>
-  <input type="search" placeholder="Search for artist or album">
+<form id="search-box" class="bg-black-search-box" ng-submit="$ctrl.submitSearch()">
+  <input type="search" placeholder="Search for artist or album" ng-model="$ctrl.search.value">
   <input type="submit" value="SEARCH">
-</div>
+</form>

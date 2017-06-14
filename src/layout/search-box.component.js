@@ -1,7 +1,11 @@
 const template = require('./search-box.html');
 
 const searchBox = {
-  template
+  bindings: {
+    search: '<'
+  },
+  template,
+  controller: 'SearchBoxController'
 }
 
 export default searchBox;
