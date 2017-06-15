@@ -1,4 +1,4 @@
-import angular from 'angular';
+import 'angular';
 import 'angular-mocks';
 
 import '../src/app';

@@ -7,12 +7,11 @@ import SearchBoxTemplate from './search-box.html';
 //Tests of SearchBox component
 describe('SearchBox', () => {
 
-  let $rootScope, makeController;
+  let makeController;
 
 
   beforeEach(angular.mock.module('app.layout'));
-  beforeEach(inject((_$rootScope_) => {
-    $rootScope = _$rootScope_;
+  beforeEach(inject(() => {
     makeController = () => {
       return new SearchBoxController();
     };
@@ -28,7 +27,7 @@ describe('SearchBox', () => {
     });
 
     it("includes controller named 'SearchBoxController'", () => {
- expect(component.controller).toEqual('SearchBoxController');
+      expect(component.controller).toEqual('SearchBoxController');
     })
   });
 

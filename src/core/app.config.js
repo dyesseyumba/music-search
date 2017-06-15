@@ -5,7 +5,7 @@
  * @param {any} $urlRouterProvider
  * @param {any} $locationProvider
  */
-const AppConfig = (AppConstants, $stateProvider, $urlRouterProvider) => {
+const AppConfig = (AppConstants, $stateProvider, $urlRouterProvider, $httpProvider) => {
   'ngInject';
 
   const homeState = {
@@ -30,7 +30,6 @@ const AppConfig = (AppConstants, $stateProvider, $urlRouterProvider) => {
   $stateProvider.state(homeState);
   $stateProvider.state(musicListState);
 
-  $urlRouterProvider.otherwise('/');
 }
 
 export default AppConfig;

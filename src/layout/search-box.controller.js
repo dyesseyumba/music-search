@@ -1,12 +1,14 @@
 class SearchBoxController {
-  constructor($state) {
+  constructor($state, JWT) {
     'ngInject';
 
     this._$state = $state;
+this._JWT =JWT;
   }
 
   submitSearch() {
-    this._$state.go('musicList',{value:this.search.value});
+    // this._$state.go('musicList',{value:this.search.value});
+    this._JWT.login();
   }
 }
 
