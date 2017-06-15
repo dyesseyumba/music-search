@@ -26,6 +26,10 @@ describe('SearchBox', () => {
     it('includes the intended template', () => {
       expect(component.template).toEqual(SearchBoxTemplate);
     });
+
+    it("includes controller named 'SearchBoxController'", () => {
+ expect(component.controller).toEqual('SearchBoxController');
+    })
   });
 
   //Controller specs
