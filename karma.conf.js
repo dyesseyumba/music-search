@@ -14,21 +14,7 @@ module.exports = function (config) {
     autoWatch: true,
     frameworks: ['jasmine'],
     browsers: ['PhantomJS'],
-    // customLaunchers: {
-    //   Chrome_no_sandbox: {
-    //     base: 'Chrome',
-    //     flags: ['--no-sandbox']
-    //   }
-    // },
     reporters: ['mocha'],
-    // plugins: [
-    //   // 'karma-phantomjs-launcher',
-    //   'karma-chrome-launcher',
-    //   'karma-jasmine',
-    //   'karma-mocha-reporter',
-    //   'karma-webpack',
-    //   'karma-sourcemap-loader'
-    // ],
     singleRun: true,
     concurrency: Infinity,
 
@@ -90,9 +76,9 @@ module.exports = function (config) {
           loader: 'url-loader?limit=1000&name=[name].[hash].[ext]'
         }]
       }
+    },
+    webpackMiddleware: {
+      noInfo: true
     }
-    // webpackMiddleware: {
-    //   noInfo: true
-    // }
   });
 };
