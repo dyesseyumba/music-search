@@ -6,7 +6,8 @@ module.exports = function (config) {
       watched: false
     }],
     preprocessors: {
-      'spec.context.js': ['webpack', 'sourcemap']
+      'spec.context.js': ['webpack', 'sourcemap'],
+      // '**/*.js': ['coverage']
     },
     port: 9876,
     colors: true,
@@ -17,6 +18,10 @@ module.exports = function (config) {
     reporters: ['mocha'],
     singleRun: true,
     concurrency: Infinity,
+
+    coverageReporter: { type: 'in-memory' },
+    remapCoverageReporter: { html: '../coverage' },
+
 
     webpack: {
       devtool: 'inline-source-map',

@@ -104,8 +104,6 @@ class JWT {
   }
 
   setAuthToken(authToken) {
-
-
     this._$window.localStorage[this._AppConstants.jwtKey] = authToken;
   }
 
@@ -119,15 +117,6 @@ class JWT {
    */
   get() {
     return this._$window.localStorage[this._AppConstants.jwtKey];
-  }
-
-  /**
-   * Destroy the JWT
-   *
-   * @memberof JWT
-   */
-  destroy() {
-    this._$window.localStorage.removeItem(this._AppConstants.jwtKey);
   }
 }
 
