@@ -10,7 +10,13 @@
   "plugins": ["transform-runtime"],
   "env": {
     "test": {
-      "plugins": ["istanbul"]
+      "plugins": [
+        ["istanbul", {
+          "exclude": [
+            "**/*.spec.js","./src/coverage"
+          ]
+        }]
+      ]
     }
   }
 }
