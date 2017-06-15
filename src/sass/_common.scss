@@ -34,6 +34,7 @@ input[type=search] {
 
 //jumbotron
 #jumbotron {
+  height:99.6vh;
   @media screen and (min-width: 30em) {
     margin: 0 2rem 0 2rem;
   }
@@ -70,7 +71,7 @@ input[type=search] {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin-top: -40px;
+  // margin-top: -40px;
   img {
     @media screen and (min-width: 0px) {
       margin: 9rem 0 5rem 0;
@@ -83,11 +84,10 @@ input[type=search] {
 
 #jumotron-line-3 {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   width: 100%;
-  margin-top: -10px;
-  padding-bottom: 30px;
+  margin-top: 5vh;
   img {
     width: 50%;
     @include centered-image;

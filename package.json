@@ -16,19 +16,20 @@
     "prebuild": "npm-run-all clean-dist lint build:html",
     "build": "cross-env NODE_ENV=production babel-node tools/build.js",
     "postbuild": "babel-node tools/distServer.js",
-    "test": "karma start",
+    "test": "cross-env NODE_ENV=test karma start",
     "test:watch": "karma start --silent --no-single-run"
   },
   "dependencies": {
     "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
     "angular-resource": "^1.6.4",
-    "angular-ui-router": "^1.0.3",
-    "lodash": "^3.10.1"
+    "angular-ui-router": "^1.0.3"
   },
   "devDependencies": {
     "angular-mocks": "^1.6.4",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-plugin-istanbul": "^4.1.4",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.5.2",
     "cheerio": "^1.0.0-rc.1",
@@ -56,6 +57,7 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^2.0.3",
+    "lodash": "^3.10.1",
     "ng-annotate-loader": "^0.6.1",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.0.2",

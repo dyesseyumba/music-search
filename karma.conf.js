@@ -9,18 +9,36 @@ module.exports = function (config) {
       'spec.context.js': ['webpack', 'sourcemap'],
       // '**/*.js': ['coverage']
     },
+
+    client: {
+      mocha: {
+        reporter: 'html', // change Karma's debug.html to mocha web reporter
+        ui: 'bdd',
+      },
+    },
+    coverageReporter: {
+      reporters: [{
+          type: 'lcov',
+          dir: 'coverage',
+          subdir: '.'
+        },
+        {
+          type: 'text-summary'
+        },
+      ],
+      includeAllSources: true,
+    },
+
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     frameworks: ['jasmine'],
     browsers: ['PhantomJS'],
-    reporters: ['mocha'],
+    reporters: ['mocha', 'coverage'],
     singleRun: true,
     concurrency: Infinity,
 
-    coverageReporter: { type: 'in-memory' },
-    remapCoverageReporter: { html: '../coverage' },
 
 
     webpack: {
