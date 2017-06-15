@@ -1,8 +1,8 @@
 module.exports = function (config) {
   config.set({
-    basePath: '',
+    basePath: 'src',
     files: [{
-      pattern: '**/*.spec.js',
+      pattern: 'spec.context.js',
       watched: false
     }],
     preprocessors: {
@@ -13,21 +13,22 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     frameworks: ['jasmine'],
-    browsers: ['Chrome_no_sandbox'],
-    customLaunchers: {
-      Chrome_no_sandbox: {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-      }
-    },
+    browsers: ['PhantomJS'],
+    // customLaunchers: {
+    //   Chrome_no_sandbox: {
+    //     base: 'Chrome',
+    //     flags: ['--no-sandbox']
+    //   }
+    // },
     reporters: ['mocha'],
-    plugins: [
-      'karma-chrome-launcher',
-      'karma-jasmine',
-      'karma-mocha-reporter',
-      'karma-webpack',
-      'karma-sourcemap-loader'
-    ],
+    // plugins: [
+    //   // 'karma-phantomjs-launcher',
+    //   'karma-chrome-launcher',
+    //   'karma-jasmine',
+    //   'karma-mocha-reporter',
+    //   'karma-webpack',
+    //   'karma-sourcemap-loader'
+    // ],
     singleRun: true,
     concurrency: Infinity,
 
@@ -90,5 +91,8 @@ module.exports = function (config) {
         }]
       }
     }
+    // webpackMiddleware: {
+    //   noInfo: true
+    // }
   });
 };

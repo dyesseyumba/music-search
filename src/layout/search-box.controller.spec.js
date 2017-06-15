@@ -1,13 +1,16 @@
-import LayouModule from './index';
+
+
 import SearchBoxController from './search-box.controller'
 import SearchBoxComponent from './search-box.component';
 import SearchBoxTemplate from './search-box.html';
 
 describe('SearchBox', ()=>{
 
+
   let $rootScope, makeController;
 
-  beforeEach(window.module(LayouModule.name));
+
+  beforeEach(angular.mock.module('app.layout'));
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
     makeController = () => {
@@ -19,8 +22,10 @@ describe('SearchBox', ()=>{
 
       let component = SearchBoxComponent;
 
+      console.info(SearchBoxTemplate);
+
       it('includes the intended template',() => {
-        expect(component.template).to.equal(SearchBoxTemplate);
+        expect(component.template).toEqual(SearchBoxTemplate);
       });
 
       // it('invokes the right controller', () => {

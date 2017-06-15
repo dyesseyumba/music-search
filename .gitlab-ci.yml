@@ -9,12 +9,12 @@ cache:
     - node_modules/
 
 before_script:
-  - set -xe
-  - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-  - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list
-  - apt-get update -yqqq
-  - apt-get install -y google-chrome-stable
-  - apt-get install -y xvfb
+  # - set -xe
+  # - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+  # - echo "deb http://dl.google.com/linux/chrome/deb/ stable main" > /etc/apt/sources.list.d/google.list
+  # - apt-get update -yqqq
+  # - apt-get install -y google-chrome-stable
+  # - apt-get install -y xvfb
   - node --version
   - npm --version
   - npm install
@@ -22,4 +22,4 @@ before_script:
 test:
  stage: test
  script:
-   -  xvfb-run -a npm test
+   -  npm test
