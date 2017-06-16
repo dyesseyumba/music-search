@@ -1,13 +1,14 @@
 /* eslint-disable no-undef */
 describe('JWT', () => {
 
-  let JWT, $window;
+  let JWT, $window, AppConstants;
 
   beforeEach(angular.mock.module('app'));
 
-  beforeEach(angular.mock.inject((_JWT_, _$window_) => {
+  beforeEach(angular.mock.inject((_JWT_, _$window_, _AppConstants_) => {
     JWT = _JWT_;
     $window = _$window_;
+    AppConstants = _AppConstants_;
   }))
 
   describe('JWT', () => {
@@ -32,7 +33,7 @@ describe('JWT', () => {
 
     it('should return the spotify-token', () => {
 
-      localStorage.setItem(this._AppConstants.jwtKey, 'ABCDEFGHIJKLMNOP');
+      localStorage.setItem(AppConstants.jwtKey, 'ABCDEFGHIJKLMNOP');
 
       const token = JWT.get();
 
@@ -46,7 +47,7 @@ describe('JWT', () => {
       JWT.setAuthToken('ABCDEFGHIJKLMNOP');
       expect(JWT.setAuthToken).toBeDefined();
 
-      expect(localStorage.getItem(this._AppConstants.jwtKey)).toEqual('ABCDEFGHIJKLMNOP');
+      expect(localStorage.getItem(AppConstants.jwtKey)).toEqual('ABCDEFGHIJKLMNOP');
     });
 
     it('should have a method openDialog', () => {

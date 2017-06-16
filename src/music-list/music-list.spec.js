@@ -10,10 +10,10 @@ describe('MusicList', () => {
   let makeController;
 
 
-  beforeEach(angular.mock.module('app.layout'));
-  beforeEach(inject(() => {
+  beforeEach(angular.mock.module('app'));
+  beforeEach(angular.mock.inject((_ApiFactory_, _JWT_, _$stateParams_) => {
     makeController = () => {
-      return new MusicListController();
+      return new MusicListController(_ApiFactory_, _JWT_, _$stateParams_);
     };
   }));
 
@@ -47,12 +47,6 @@ describe('MusicList', () => {
       expect(musicListController.$onInit).toBeDefined();
     });
 
-    it('$onInit should be defined', function () {
-      let musicListController = makeController();
-      musicListController.$onInit();
-
-      expect(musicListController.$onInit).toBeDefined();
-    });
 
     it('openModal should be defined', function () {
       let musicListController = makeController();

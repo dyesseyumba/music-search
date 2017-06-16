@@ -28,7 +28,9 @@ class ApiFactory {
    * @memberof ApiFactory
    */
   getByArtistOrAlbum(value) {
-    const url = this._AppConstants.getByArtistOrAlbumUri + value + this._AppConstants.spotifyQueryType;
+    const url = (value != undefined) ?
+      this._AppConstants.getByArtistOrAlbumUri + value + this._AppConstants.spotifyQueryType :
+      this._AppConstants.getByArtistOrAlbumUri;
     return this._$resource(url, {}, {
       query: {
         method: 'GET',

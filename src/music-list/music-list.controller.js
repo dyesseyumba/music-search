@@ -31,14 +31,14 @@ class MusicItemController {
     var span = document.getElementsByClassName("close")[0];
 
     //     // When the user clicks on the button, open the modal
-    btn.onclick = () => {
-      this.openModal(modal);
-    }
+    // btn.onclick = () => {
+    //   this.openModal(modal);
+    // }
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = () => {
-      this.closeModal(modal);
-    }
+    // span.onclick = () => {
+    //   this.closeModal(modal);
+    // }
   }
 
   //close the modal
