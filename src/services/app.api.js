@@ -17,7 +17,6 @@ class ApiFactory {
     this._AppConstants = AppConstants;
     this._$resource = $resource;
     this._JWT = JWT;
-    var token = this._JWT.get();
   }
 
   /**
@@ -34,7 +33,6 @@ class ApiFactory {
     return this._$resource(url, {}, {
       query: {
         method: 'GET',
-        isArray: true,
         headers: {
           Authorization: 'Bearer ' + this._JWT.get()
         }

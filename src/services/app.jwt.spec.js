@@ -1,13 +1,12 @@
 /* eslint-disable no-undef */
 describe('JWT', () => {
 
-  let JWT, $window, AppConstants;
+  let JWT, AppConstants;
 
   beforeEach(angular.mock.module('app'));
 
-  beforeEach(angular.mock.inject((_JWT_, _$window_, _AppConstants_) => {
+  beforeEach(angular.mock.inject((_JWT_, _AppConstants_) => {
     JWT = _JWT_;
-    $window = _$window_;
     AppConstants = _AppConstants_;
   }))
 

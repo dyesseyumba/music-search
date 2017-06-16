@@ -9,7 +9,20 @@ class MusicItemController {
     this._ApiFactory = ApiFactory;
     this._JWT = JWT;
     this._$stateParams = $stateParams;
+
+    this.musicItems = [{
+      id: null,
+      type: null,
+      name: null,
+      images: [{
+        height: null,
+        url: null,
+        width: null
+      }]
+    }];
   }
+
+
 
   /**
    * Initialisation of MusicItemController
@@ -18,9 +31,22 @@ class MusicItemController {
    */
   $onInit() {
 
-    this.spotifyResults = this._ApiFactory.getByArtistOrAlbum(this._$stateParams.value).query(undefined, (response) => {
+    // this.spotifyResults = this._ApiFactory.getByArtistOrAlbum(this._$stateParams.value).query({}, (response) => {
+    this.spotifyResults = this._ApiFactory.getByArtistOrAlbum().query({}, (response) => {
 
-      console.log(response);
+      response.albums.items.forEach((a) => {
+        const album = {
+          id: a.id,
+          name: a.name,
+          type: a.type,
+          images: a.images
+
+        }
+        this.musicItems.push(album);
+      });
+
+      console.log(this.musicItems);
+
     }, (response) => {
       if (response.status === 401 || response.status === 403 || response.status === 419 || response.status === 440)
         this._JWT.login();
