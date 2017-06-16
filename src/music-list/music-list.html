@@ -3,7 +3,8 @@
     <div class="row">
       <div class="col-3" ng-repeat="result in $ctrl.spotifyResults">
         <div class="item-block">
-          <img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">
+          <!--<img class="img-fluid img-item-label" src="../images/toDelete.png" alt="Spotify item">-->
+          <img class="img-fluid img-item-label" ng-src="{{result.images[1].url}}" alt="Spotify item">
           <img class="img-fluid img-item-icon" src="../images/artist-icon@2x.png" alt="Spotify item" />
         </div>
         <div class="item-label">
