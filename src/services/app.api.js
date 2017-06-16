@@ -11,11 +11,12 @@ class ApiFactory {
    *
    * @memberof ApiFactory
    */
-  constructor(AppConstants, $resource) {
+  constructor(AppConstants, $resource, JWT) {
     'ngInject';
 
     this._AppConstants = AppConstants;
     this._$resource = $resource;
+    this._JWT = JWT;
   }
 
   /**
@@ -26,8 +27,16 @@ class ApiFactory {
    * @memberof ApiFactory
    */
   getByArtistOrAlbum() {
-    const results = this._AppConstants.getByArtistOrAlbumUri;
-    return this._$resource(results);
+    const url = this._AppConstants.getByArtistOrAlbumUri;
+    return this._$resource(url, undefined, {
+      query: {
+        method: 'GET',
+        isArray: true,
+        headers: {
+          Authorization: 'Bearer ' + this._JWT.get()
+        }
+      }
+    });
   }
 }
 
