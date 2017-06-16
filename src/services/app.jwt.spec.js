@@ -32,7 +32,7 @@ describe('JWT', () => {
 
     it('should return the spotify-token', () => {
 
-      $window.localStorage['spotify-token'] = 'ABCDEFGHIJKLMNOP';
+      localStorage.setItem(this._AppConstants.jwtKey, 'ABCDEFGHIJKLMNOP');
 
       const token = JWT.get();
 
@@ -46,7 +46,7 @@ describe('JWT', () => {
       JWT.setAuthToken('ABCDEFGHIJKLMNOP');
       expect(JWT.setAuthToken).toBeDefined();
 
-      expect($window.localStorage['spotify-token']).toEqual('ABCDEFGHIJKLMNOP');
+      expect(localStorage.getItem(this._AppConstants.jwtKey)).toEqual('ABCDEFGHIJKLMNOP');
     });
 
     it('should have a method openDialog', () => {

@@ -10,9 +10,6 @@ const AppRun = ($rootScope, $state, $stateParams) => {
   $rootScope.$state = $state;
   $rootScope.$stateParams = $stateParams;
 
-// Save the JWT in the localStorage
-  // JWT.save();
-  // JWT.login();
 }
 
 export default AppRun;

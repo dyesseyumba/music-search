@@ -104,7 +104,7 @@ class JWT {
   }
 
   setAuthToken(authToken) {
-    this._$window.localStorage[this._AppConstants.jwtKey] = authToken;
+    localStorage.setItem(this._AppConstants.jwtKey, authToken);
   }
 
 
@@ -116,7 +116,7 @@ class JWT {
    * @memberof JWT
    */
   get() {
-    return this._$window.localStorage[this._AppConstants.jwtKey];
+   return localStorage.getItem(this._AppConstants.jwtKey);
   }
 }
 
