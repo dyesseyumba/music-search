@@ -4,9 +4,10 @@
  * @class MusicItemController
  */
 class MusicItemController {
-  constructor(ApiFactory) {
+  constructor(ApiFactory, JWT) {
     'ngInject';
     this._ApiFactory = ApiFactory;
+    this._JWT = JWT;
   }
 
   /**
@@ -16,7 +17,13 @@ class MusicItemController {
    */
   $onInit() {
 
-    this.spotifyResults = this._ApiFactory.getByArtistOrAlbum().query();
+    this.spotifyResults = this._ApiFactory.getByArtistOrAlbum('stan').query(undefined, (response) => {
+
+      console.log(response);
+    }, (response) => {
+      if (response.status === 401 || response.status === 403 || response.status === 419 || response.status === 440)
+        this._JWT.login();
+    });
 
     var modal = document.getElementById('music-detail');
     var btn = document.getElementById("myBtn");

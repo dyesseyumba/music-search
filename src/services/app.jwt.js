@@ -53,7 +53,7 @@ class JWT {
 
     const params = {
       client_id: 'f09d6b38ae244bef8defb2ae318d4ca7',
-      redirect_uri: 'http://localhost:3001',
+      redirect_uri: this._AppConstants.redirectUri,
       response_type: 'token'
     };
 

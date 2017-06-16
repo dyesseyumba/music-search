@@ -26,16 +26,15 @@ class ApiFactory {
    *
    * @memberof ApiFactory
    */
-  getByArtistOrAlbum() {
-    const url = this._AppConstants.getByArtistOrAlbumUri;
+  getByArtistOrAlbum(value) {
+    const url = this._AppConstants.getByArtistOrAlbumUri + value + this._AppConstants.spotifyQueryType;
     return this._$resource(url, {}, {
       query: {
         method: 'GET',
-        isArray: true
-        // ,
-        // headers: {
-        //   Authorization: 'Bearer ' + this._JWT.get()
-        // }
+        isArray: true,
+        headers: {
+          Authorization: 'Bearer ' + this._JWT.get()
+        }
       }
     });
   }

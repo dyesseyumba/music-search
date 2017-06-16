@@ -5,8 +5,9 @@
  * @param {any} $urlRouterProvider
  * @param {any} $locationProvider
  */
-const AppConfig = (AppConstants, $stateProvider, $urlRouterProvider) => {
+const AppConfig = (AppConstants, $stateProvider) => {
   'ngInject';
+
 
   const homeState = {
     name: 'home',
@@ -26,12 +27,19 @@ const AppConfig = (AppConstants, $stateProvider, $urlRouterProvider) => {
     }
   }
 
+  const callbackState = {
+    name: 'callback',
+    url: '/callback',
+    component: 'home',
+    data: {
+      pageTitle: 'Home - ' + AppConstants.appName
+    }
+  }
+
 
   $stateProvider.state(homeState);
   $stateProvider.state(musicListState);
-
-  $urlRouterProvider.otherwise('/');
-
+  $stateProvider.state(callbackState);
 }
 
 export default AppConfig;
