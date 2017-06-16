@@ -33,5 +33,28 @@ describe('JWT', () => {
 
       expect(token).toEqual('ABCDEFGHIJKLMNOP');
     });
+
+    it('should set the spotify-token', () => {
+
+      JWT.setAuthToken('ABCDEFGHIJKLMNOP');
+      expect(JWT.setAuthToken).toBeDefined();
+
+      expect($window.localStorage['spotify-token']).toEqual('ABCDEFGHIJKLMNOP');
+    });
+
+    it('should have a method openDialog', () => {
+
+      const win = JWT.openDialog(
+        'http://localhost300:?', 'Spotify', 'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no',
+        () => {
+        $q.defer().reject();
+        }
+
+      );
+
+      expect(JWT.openDialog).toBeDefined();
+      expect(win).toBeDefined();
+      expect(win.closed).toEqual(false);
+    });
   });
 });

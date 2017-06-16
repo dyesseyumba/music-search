@@ -2,8 +2,7 @@ const template = require('./home.html');
 
 //Home component
 const home = {
-  template,
-  controller: 'HomeController'
+  template
 };
 
 export default home;
