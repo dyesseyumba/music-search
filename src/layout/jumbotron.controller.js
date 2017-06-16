@@ -18,7 +18,6 @@ class JumbotronController {
    * @memberof JumbotronController
    */
   goToBottom() {
-    // this._$anchorScroll('jumotron-line-3');
     const result = angular.element(document.getElementById('jumotron-line-3'));
 
     this._$document.scrollToElement(result,0, 1000);

@@ -15,6 +15,13 @@ describe('JWT', () => {
       expect(JWT.login).toBeDefined();
     });
 
+    it('login should return a defined promise', () => {
+      JWT.login().then((result) => {
+        expect(result).toBeDefined();
+        done();
+      });
+    });
+
     it('should turn an object into a query string', function () {
       expect(JWT.transformQueryString({
         a: 't',
@@ -47,7 +54,7 @@ describe('JWT', () => {
       const win = JWT.openDialog(
         'http://localhost300:?', 'Spotify', 'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no',
         () => {
-        $q.defer().reject();
+          $q.defer().reject();
         }
 
       );

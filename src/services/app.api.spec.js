@@ -30,18 +30,10 @@ describe('Api', () => {
     $httpBackend.verifyNoOutstandingRequest();
   });
 
-  it('Should have a method getByArtistOrAlbum', () => {
-    expect(ApiFactory.getByArtistOrAlbum().query()).toBeDefined();
-  });
-
-  it('should fetch the phones data from `spotify Api`', function () {
-    console.info('results');
-    console.info(ApiFactory.getByArtistOrAlbum);
+//Verify resource getByArtistOrAlbum
+  it('should fetch the artist or album data from `spotify Api`', function () {
 
     var results = ApiFactory.getByArtistOrAlbum().query();
-
-
-    console.info('results: '+results);
 
     expect(results).toEqual([]);
 
