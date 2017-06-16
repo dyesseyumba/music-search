@@ -1,6 +1,7 @@
 import angular from 'angular';
 import 'angular-resource';
 import 'angular-ui-router';
+import 'angular-scroll';
 
 // Import our app config files
 import constants from './core/app.constants';
@@ -21,7 +22,8 @@ const requires = [
   'app.home',
   'app.music-list',
   'app.music-detail',
-  'custom-services'
+  'custom-services',
+  'duScroll'
 ];
 
 angular.module('app', requires);

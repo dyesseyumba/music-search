@@ -1,15 +1,27 @@
+import angular from 'angular';
+
+/**
+ * The controller of Jumbotron component
+ *
+ * @class JumbotronController
+ */
 class JumbotronController {
-  constructor($location, $anchorScroll) {
+  constructor($document, $anchorScroll) {
     'ngInject';
-    this._$location = $location;
+    this._$document = $document;
     this._$anchorScroll = $anchorScroll;
   }
 
+  /**
+   * Go to anchor 'jumotron-line-3'
+   *
+   * @memberof JumbotronController
+   */
   goToBottom() {
-    this._$location.hash('bottom');
+    // this._$anchorScroll('jumotron-line-3');
+    const result = angular.element(document.getElementById('jumotron-line-3'));
 
-    this._$anchorScroll();
-
+    this._$document.scrollToElement(result,0, 1000);
   }
 }
 
