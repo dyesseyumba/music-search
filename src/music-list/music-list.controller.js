@@ -18,7 +18,7 @@ class MusicItemController {
 
     this.spotifyResults = this._ApiFactory.getByArtistOrAlbum().query();
 
-    var modal = document.getElementById('myModal');
+    var modal = document.getElementById('music-detail');
     var btn = document.getElementById("myBtn");
     var span = document.getElementsByClassName("close")[0];
 

@@ -8,8 +8,7 @@ class SearchBoxController {
   }
 
   submitSearch() {
-    // this._$state.go('musicList',{value:this.search.value});
-    this._JWT.login();
+    this._$state.go('musicList',{value:this.search.value});
   }
 }
 

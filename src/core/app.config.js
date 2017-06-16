@@ -17,18 +17,18 @@ const AppConfig = (AppConstants, $stateProvider, $urlRouterProvider) => {
     }
   }
 
-  // const musicListState = {
-  //   name: 'musicList',
-  //   url: '/search/{value}',
-  //   component: 'musicList',
-  //   data: {
-  //     pageTitle: 'Search - ' + AppConstants.appName
-  //   }
-  // }
+  const musicListState = {
+    name: 'musicList',
+    url: '/search/{value}',
+    component: 'musicList',
+    data: {
+      pageTitle: 'Search - ' + AppConstants.appName
+    }
+  }
 
 
   $stateProvider.state(homeState);
-  // $stateProvider.state(musicListState);
+  $stateProvider.state(musicListState);
 
   $urlRouterProvider.otherwise('/');
 
