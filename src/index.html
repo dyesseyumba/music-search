@@ -27,16 +27,15 @@
 
 </head>
 
-<body ng-class="{'bg-black-result':1===1}">
+<body ng-class="{'bg-black-result' : $state.current.name === 'musicList'}">
   <!--<body >-->
-
   <jumbotron></jumbotron>
 
   <search-box></search-box>
 
   <div ui-view></div>
 
-  <app-footer></app-footer>
+  <app-footer ></app-footer>
 
 </body>
 
