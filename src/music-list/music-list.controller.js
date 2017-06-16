@@ -4,10 +4,11 @@
  * @class MusicItemController
  */
 class MusicItemController {
-  constructor(ApiFactory, JWT) {
+  constructor(ApiFactory, JWT, $stateParams) {
     'ngInject';
     this._ApiFactory = ApiFactory;
     this._JWT = JWT;
+    this._$stateParams = $stateParams;
   }
 
   /**
@@ -17,7 +18,7 @@ class MusicItemController {
    */
   $onInit() {
 
-    this.spotifyResults = this._ApiFactory.getByArtistOrAlbum('stan').query(undefined, (response) => {
+    this.spotifyResults = this._ApiFactory.getByArtistOrAlbum(this._$stateParams.value).query(undefined, (response) => {
 
       console.log(response);
     }, (response) => {

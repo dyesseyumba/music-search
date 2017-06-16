@@ -17,6 +17,7 @@ class ApiFactory {
     this._AppConstants = AppConstants;
     this._$resource = $resource;
     this._JWT = JWT;
+    var token = this._JWT.get();
   }
 
   /**
