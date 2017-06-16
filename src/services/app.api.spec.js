@@ -5,8 +5,8 @@ describe('Api', () => {
     resultsData = [{
       name: 'Alberta Clarck'
     }],
-    ApiFactory,
-    AppConstants
+    AppConstants,
+    ApiFactory;
 
   beforeEach(function () {
     jasmine.addCustomEqualityTester(angular.equals);
@@ -14,7 +14,7 @@ describe('Api', () => {
 
   beforeEach(angular.mock.module('app'));
 
-  beforeEach(angular.mock.inject((_$httpBackend_, _ApiFactory_, _AppConstants_) => {
+  beforeEach(angular.mock.inject((_$httpBackend_, _AppConstants_, _ApiFactory_) => {
     $httpBackend = _$httpBackend_;
 
     AppConstants = _AppConstants_;
@@ -31,11 +31,17 @@ describe('Api', () => {
   });
 
   it('Should have a method getByArtistOrAlbum', () => {
-    expect(ApiFactory.getByArtistOrAlbum).toBeDefined();
+    expect(ApiFactory.getByArtistOrAlbum().query()).toBeDefined();
   });
 
   it('should fetch the phones data from `spotify Api`', function () {
-    var results = ApiFactory.getByArtistOrAlbum();
+    console.info('results');
+    console.info(ApiFactory.getByArtistOrAlbum);
+
+    var results = ApiFactory.getByArtistOrAlbum().query();
+
+
+    console.info('results: '+results);
 
     expect(results).toEqual([]);
 

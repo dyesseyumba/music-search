@@ -1,9 +1,10 @@
 class SearchBoxController {
-  constructor($state, JWT) {
+  constructor($state, JWT, ApiFactory) {
     'ngInject';
 
     this._$state = $state;
-this._JWT =JWT;
+    this._JWT = JWT;
+    this._ApiFactory = ApiFactory;
   }
 
   submitSearch() {

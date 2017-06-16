@@ -7,8 +7,8 @@ angular.module('custom-services', ['ngResource']);
 
 //Create the factory ApiFactory
 angular.module('custom-services')
-  .factory('ApiFactory', ['AppConstants', '$resource', (AppConstants, $resource) => new ApiFactory(AppConstants, $resource)]);
+  .factory('ApiFactory', ['AppConstants', '$resource', 'JWT', (AppConstants, $resource, JWT) => new ApiFactory(AppConstants, $resource, JWT)]);
 
 /* eslint-disable angular/no-service-method  */
 angular.module('custom-services')
-.service('JWT', Jwt);
+  .service('JWT', Jwt);

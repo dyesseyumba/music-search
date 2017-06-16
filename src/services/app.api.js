@@ -28,13 +28,14 @@ class ApiFactory {
    */
   getByArtistOrAlbum() {
     const url = this._AppConstants.getByArtistOrAlbumUri;
-    return this._$resource(url, undefined, {
+    return this._$resource(url, {}, {
       query: {
         method: 'GET',
-        isArray: true,
-        headers: {
-          Authorization: 'Bearer ' + this._JWT.get()
-        }
+        isArray: true
+        // ,
+        // headers: {
+        //   Authorization: 'Bearer ' + this._JWT.get()
+        // }
       }
     });
   }
