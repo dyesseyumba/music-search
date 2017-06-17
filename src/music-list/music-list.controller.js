@@ -34,7 +34,7 @@ class MusicItemController {
   $onInit() {
 
     this.spotifyResults = this._ApiFactory.getByArtistOrAlbum(this._$stateParams.value).query({}, (response) => {
-    // this._ApiFactory.getByArtistOrAlbum().query({}, (response) => {
+      // this._ApiFactory.getByArtistOrAlbum().query({}, (response) => {
 
       const albums = this.matchSpotifyResults(response.albums.items);
       const artists = this.matchSpotifyResults(response.artists.items);
@@ -45,7 +45,9 @@ class MusicItemController {
 
     }, (response) => {
       if (response.status === 401 || response.status === 403 || response.status === 419 || response.status === 440)
-        this._JWT.login();
+        this._JWT.login().then(() => {
+          console.log('logged');
+        });
     });
 
     var modal = document.getElementById('music-detail');

@@ -1,11 +1,12 @@
 class JWT {
-  constructor(AppConstants, $window, $http, $q) {
+  constructor(AppConstants, $window, $http, $q, $state) {
     'ngInject';
 
     this._AppConstants = AppConstants;
     this._$window = $window;
     this._$http = $http;
     this._$q = $q;
+    this._$state = $state;
   }
 
   /**
@@ -77,6 +78,8 @@ class JWT {
         authCompleted = true;
 
         that.setAuthToken(e.newValue);
+
+        that._$state.go('home');
         this._$window.removeEventListener('storage', storageChanged, false);
 
         deferred.resolve(e.newValue);
@@ -116,7 +119,7 @@ class JWT {
    * @memberof JWT
    */
   get() {
-   return localStorage.getItem(this._AppConstants.jwtKey);
+    return localStorage.getItem(this._AppConstants.jwtKey);
   }
 }
 
