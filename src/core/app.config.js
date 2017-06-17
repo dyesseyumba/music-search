@@ -5,9 +5,10 @@
  * @param {any} $urlRouterProvider
  * @param {any} $locationProvider
  */
-const AppConfig = (AppConstants, $stateProvider) => {
+const AppConfig = (AppConstants, $stateProvider, $locationProvider) => {
   'ngInject';
 
+ $locationProvider.html5Mode(true);
 
   const homeState = {
     name: 'home',
@@ -27,19 +28,19 @@ const AppConfig = (AppConstants, $stateProvider) => {
     }
   }
 
-  const callbackState = {
-    name: 'callback',
-    url: '/callback',
-    component: 'home',
-    data: {
-      pageTitle: 'Home - ' + AppConstants.appName
-    }
-  }
-
+  // const callbackState = {
+  //   name: 'callback',
+  //   url: '/callback',
+  //   component: 'home',
+  //   data: {
+  //     pageTitle: 'Home - ' + AppConstants.appName
+  //   }
+  // }
 
   $stateProvider.state(homeState);
   $stateProvider.state(musicListState);
-  $stateProvider.state(callbackState);
+  // $stateProvider.state(callbackState);
+
 }
 
 export default AppConfig;

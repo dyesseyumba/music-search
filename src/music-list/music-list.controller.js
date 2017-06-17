@@ -33,8 +33,8 @@ class MusicItemController {
    */
   $onInit() {
 
-    // this.spotifyResults = this._ApiFactory.getByArtistOrAlbum(this._$stateParams.value).query({}, (response) => {
-    this._ApiFactory.getByArtistOrAlbum().query({}, (response) => {
+    this.spotifyResults = this._ApiFactory.getByArtistOrAlbum(this._$stateParams.value).query({}, (response) => {
+    // this._ApiFactory.getByArtistOrAlbum().query({}, (response) => {
 
       const albums = this.matchSpotifyResults(response.albums.items);
       const artists = this.matchSpotifyResults(response.artists.items);
