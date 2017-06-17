@@ -1,5 +1,5 @@
 class JWT {
-  constructor(AppConstants, $window, $http, $q, $state) {
+  constructor(AppConstants, $window, $http, $q, $state, toastr) {
     'ngInject';
 
     this._AppConstants = AppConstants;
@@ -7,6 +7,7 @@ class JWT {
     this._$http = $http;
     this._$q = $q;
     this._$state = $state;
+    this._toastr = toastr;
   }
 
   /**
@@ -79,6 +80,7 @@ class JWT {
 
         that.setAuthToken(e.newValue);
 
+        that._toastr.success('You successfully logged in!', 'Connected!');
         that._$state.go('home');
         this._$window.removeEventListener('storage', storageChanged, false);
 

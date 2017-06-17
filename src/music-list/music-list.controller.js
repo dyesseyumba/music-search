@@ -41,13 +41,9 @@ class MusicItemController {
 
       this.spotifyResults = [...albums, ...artists].sort(this.compareByName);
 
-      console.log(this.spotifyResults);
-
     }, (response) => {
       if (response.status === 401 || response.status === 403 || response.status === 419 || response.status === 440)
-        this._JWT.login().then(() => {
-          console.log('logged');
-        });
+        this._JWT.login();
     });
 
     var modal = document.getElementById('music-detail');
