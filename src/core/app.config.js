@@ -27,19 +27,8 @@ const AppConfig = (AppConstants, $stateProvider, $locationProvider) => {
       pageTitle: 'Search - ' + AppConstants.appName
     }
   }
-
-  // const callbackState = {
-  //   name: 'callback',
-  //   url: '/callback',
-  //   component: 'home',
-  //   data: {
-  //     pageTitle: 'Home - ' + AppConstants.appName
-  //   }
-  // }
-
   $stateProvider.state(homeState);
   $stateProvider.state(musicListState);
-  // $stateProvider.state(callbackState);
 
 }
 

@@ -46,6 +46,12 @@ p {
   margin: 0 auto;
 }
 
+.row{
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
 // Row and col responsive class
 .wrapper,
 .row {
