@@ -2,8 +2,8 @@
   <div class="wrapper">
     <div class="row">
       <div class="col-3" ng-repeat="result in $ctrl.spotifyResults">
-        <div class="item-block">
-          <img class="img-fluid img-item-label" ng-src="{{result.images[1].url}}" alt="Spotify item">
+        <div class="item-block"  ng-class="{'blur-5px' : result.images[1] == null}">
+          <img class="img-fluid img-item-label" ng-if="result.images[1] != null" ng-src="{{result.images[1].url}}" alt="Spotify item">
           <img class="img-fluid img-item-icon" ng-if="result.type === 'artist'" src="../images/artist-icon@2x.png" alt="Spotify item"
           />
           <img class="img-fluid img-item-icon" ng-if="result.type === 'album'" src="../images/album-icon.png" alt="Spotify item" />
@@ -22,7 +22,7 @@
           <span>Alberta Clark</span>
         </div>
       </div>
-      <!--<div class="col-3">
+      <div class="col-3">
         <div class="item-block">
           <img class="img-fluid img-item-label" style="filter: blur(5px);" src="../images/toDelete.png" alt="Spotify item">
           <img class="img-fluid" style="width: 50%; margin-top: -160px; margin-left:60px;  position: absolute; " src="../images/vynil.png" alt="Spotify item"
@@ -31,7 +31,7 @@
         <div class="item-label">
           <span>Alberta Clark</span>
         </div>
-      </div>-->
+      </div>
     </div>
     <div class="row center-block" style="padding: 1rem 0 1rem 0">
       <button class="btn">
