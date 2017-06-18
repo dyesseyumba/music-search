@@ -199,6 +199,13 @@ input[type=search] {
   }
 }
 
+.img-item-empty {
+  width: 50%;
+  margin-top: 0;
+  margin-left: 25%;
+  position: absolute;
+}
+
 .img-item-icon {
   @media screen and (min-width: 0) and (max-width: 29.9rem) {
     width: 20%;
@@ -225,7 +232,7 @@ input[type=search] {
   position: relative;
   display: flex;
   align-items: center;
-  border-radius: 5px 5px 0 0 ;
+  border-radius: 5px 5px 0 0;
   @media screen and (min-width: 71rem) and (max-width: 100rem) {
     height:260px;
   }
