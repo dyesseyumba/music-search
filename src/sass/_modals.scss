@@ -16,17 +16,40 @@
 .modal-content {
   background-color: #fefefe;
   margin: 2% auto;
-  width: 41rem; // height: 92%; // box-shadow: 0 4px 8px 0 #464646, 0 6px 16px 0 #5A5A5A;
+  width: 41rem;
+  padding-bottom: 1.5%;
+  border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  section: {
-    position: relative;
-  }
   h1 {
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
     position: absolute;
     margin-top: -80px;
     margin-left: 33px;
   }
+}
+
+.modal-jumbotron {
+  position: relative;
+}
+
+//Motel's item
+.item-details {
+  margin: 2% 5%;
+  article {
+    display: flex;
+    margin-bottom: 15px;
+  }
+}
+
+//The single track or album
+.album-track-title {
+  margin: 15px 15px 10px 15px;
+  font-weight:bolder;
+font-size:20px
+}
+
+.track-length {
+  margin-left: 15px
 }
 
 // The Close Button
@@ -36,8 +59,8 @@
   font-size: 62px;
   font-weight: lighter;
   position: absolute;
-  margin-top: -22%;
-  margin-left: 48%;
+  margin-top: -43.5%;
+  margin-left: 92.5%;
 }
 
 .close:hover,
