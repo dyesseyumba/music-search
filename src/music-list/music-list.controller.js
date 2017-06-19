@@ -11,6 +11,8 @@ class MusicItemController {
     this._$stateParams = $stateParams;
 
     this.musicRange = [];
+    this.spotifyResults = [];
+    this.page = 0;
   }
 
 
@@ -22,21 +24,45 @@ class MusicItemController {
    */
   $onInit() {
 
+    this.loadArtistsOrAlbums(0);
 
-    this.spotifyResults = this._ApiFactory.getByArtistOrAlbum(this._$stateParams.value).query({}, (response) => {
+    this.albumModal = document.getElementById('music-album');
+  }
+
+  //Open the modal
+  openModal(id) {
+    this.itemId = id;
+    this.albumModal.style.display = "block";
+  }
+
+  loadNextArtistsOrAlbums() {
+    this.page++;
+    this.loadArtistsOrAlbums(this.page * 6);
+  }
+
+  /**
+   * Call spotify Api to load artist or albums
+   *
+   * @param number offset
+   *
+   * @memberof MusicItemController
+   */
+  loadArtistsOrAlbums(offset) {
+    this._ApiFactory.getByArtistOrAlbum(this._$stateParams.value, offset).query({}, (response) => {
       // this._ApiFactory.getByArtistOrAlbum().query({}, (response) => {
 
       const albums = this.matchSpotifyResults(response.albums.items);
       const artists = this.matchSpotifyResults(response.artists.items);
 
-      this.spotifyResults = [...albums, ...artists].sort(this.compareByName);
+      this.musicRange = [...albums, ...artists].sort(this.compareByName);
+      this.spotifyResults = [...this.spotifyResults, ...this.musicRange];
+
+      console.log(this.spotifyResults)
 
     }, (response) => {
       if (response.status === 401 || response.status === 403 || response.status === 419 || response.status === 440)
         this._JWT.login();
     });
-
-    this.albumModal = document.getElementById('music-album');
   }
 
   /**
@@ -85,14 +111,6 @@ class MusicItemController {
       comparison = -1;
     }
     return comparison;
-  }
-
-  //Open the modal
-  openModal(id) {
-
-
-    this.itemId = id;
-    this.albumModal.style.display = "block";
   }
 
 }
