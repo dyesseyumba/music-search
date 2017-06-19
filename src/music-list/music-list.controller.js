@@ -22,6 +22,7 @@ class MusicItemController {
    */
   $onInit() {
 
+
     this.spotifyResults = this._ApiFactory.getByArtistOrAlbum(this._$stateParams.value).query({}, (response) => {
       // this._ApiFactory.getByArtistOrAlbum().query({}, (response) => {
 
@@ -87,7 +88,10 @@ class MusicItemController {
   }
 
   //Open the modal
-  openModal() {
+  openModal(id) {
+
+
+    this.itemId = id;
     this.albumModal.style.display = "block";
   }
 

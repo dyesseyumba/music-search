@@ -9,6 +9,8 @@ class MusicAlbumsController {
 
   //Close the modal
   closeModal() {
+
+    console.log(this.itemId)
     this.albumModal.style.display = "none";
   }
 }
