@@ -49,7 +49,7 @@ class ApiFactory {
   getAlbumDetails(id) {
     const url = this._AppConstants.getAlbumDetails + id;
 
-    this.getDetails(url);
+    return this.getDetails(url);
   }
 
   /**
@@ -62,7 +62,7 @@ class ApiFactory {
   getArtistDetails(id) {
     const url = this._AppConstants.getArtistDetails + id;
 
-    this.getDetails(url);
+    return this.getDetails(url);
   }
 
   /**
