@@ -11,17 +11,6 @@ class MusicItemController {
     this._$stateParams = $stateParams;
 
     this.musicRange = [];
-
-    this.musicItems = [{
-      id: null,
-      type: null,
-      name: null,
-      images: [{
-        height: null,
-        url: null,
-        width: null
-      }]
-    }];
   }
 
 
@@ -47,18 +36,6 @@ class MusicItemController {
     });
 
     this.albumModal = document.getElementById('music-album');
-    // var btn = document.getElementById("myBtn");
-    // var span = document.getElementsByClassName("close")[0];
-
-    //     // When the user clicks on the button, open the modal
-    // btn.onclick = () => {
-    //   this.openModal(modal);
-    // }
-
-    // When the user clicks on <span> (x), close the modal
-    // span.onclick = () => {
-    //   this.closeModal(modal);
-    // }
   }
 
   /**
@@ -109,15 +86,11 @@ class MusicItemController {
     return comparison;
   }
 
-  //close the modal
+  //Open the modal
   openModal() {
     this.albumModal.style.display = "block";
   }
 
-  //Open the modal
-  closeModal(modal) {
-    modal.style.display = "none";
-  }
 }
 
 export default MusicItemController;

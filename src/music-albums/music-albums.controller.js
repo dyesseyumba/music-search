@@ -2,10 +2,14 @@ class MusicAlbumsController {
   constructor() {
     'ngInject';
   }
-  onOpenModal(modal) {
 
-    debugger;
-    console.log(modal);
+  $onInit() {
+    this.albumModal = document.getElementById('music-album');
+  }
+
+  //Close the modal
+  closeModal() {
+    this.albumModal.style.display = "none";
   }
 }
 

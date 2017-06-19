@@ -8,7 +8,7 @@
 const AppConfig = (AppConstants, $stateProvider, $locationProvider) => {
   'ngInject';
 
- $locationProvider.html5Mode(true);
+//  $locationProvider.html5Mode(true);
 
   const homeState = {
     name: 'home',
