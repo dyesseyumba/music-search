@@ -43,6 +43,7 @@ class ApiFactory {
    * Get Detail of a specific album
    *
    * @param {string} id
+   * @returns Http response result from Spotify Api
    *
    * @memberof ApiFactory
    */
@@ -56,11 +57,40 @@ class ApiFactory {
    * Get details of specific album
    *
    * @param {string} id
+   * @returns Http response result from Spotify Api
    *
    * @memberof ApiFactory
    */
   getArtistDetails(id) {
     const url = this._AppConstants.getArtistDetails + id;
+
+    return this.getDetails(url);
+  }
+
+  /**
+   * Get albums of specific artist
+   *
+   * @param {string} id
+   * @returns Http response result from Spotify Api
+   *
+   * @memberof ApiFactory
+   */
+  getArtistAlbums(id) {
+    const url = this._AppConstants.getArtistDetails + id + '/albums';
+
+    return this.getDetails(url);
+  }
+
+  /**
+   * Get tracks of specific artist
+   *
+   * @param {any} id
+   * @returns Http response result from Spotify Api
+   *
+   * @memberof ApiFactory
+   */
+  getAlbumsTracks(id) {
+    const url = this._AppConstants.getAlbumDetails + id + '/tracks';
 
     return this.getDetails(url);
   }
