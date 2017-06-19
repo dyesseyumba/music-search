@@ -4,20 +4,12 @@ $grid-max-width: 70em;
 // breakpoints
 $breakpoint-medium: "only screen and (min-width: 30em)";
 //Typographie
-$fontName: "Raleway Regular",
+$fontName: "Raleway",
 "Segoe UI",
 "Open Sans",
 sans-serif,
 serif;
-$fontNameLight: "Raleway Light",
-"Segoe UI Light",
-"Open Sans Light",
-sans-serif,
-serif;
-$fontNameBold: "Raleway Bold",
-"Segoe UI Bold",
-sans-serif,
-serif;
+
 $baseFontSize: .875rem;
 $secondTextFontSize: .75rem;
 $smallTextFontSize: .625rem;
