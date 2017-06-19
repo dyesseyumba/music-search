@@ -1,6 +1,8 @@
 <!-- Modal content -->
 <div class="modal-content">
-  <section class="modal-jumbotron">
+
+  <!--Jumbotron Desktop View-->
+  <section class="modal-jumbotron modal-content-lg-only">
 
     <img src="../images/toDelete2.png" style="width: 100%" alt="Artist">
 
@@ -8,10 +10,25 @@
         &times;</span>
     <h1 class="fg-white">Alberta Clark</h1>
   </section>
+  <!--End Jumbotron Desktop View-->
+
+  <!-- Jumbotron Mobile View-->
+  <section class="modal-jumbotron modal-content-sm-only">
+
+    <img src="../images/toDelete2.png" style="width: 100%" alt="Artist">
+
+    <span class="close" ng-click="$ctrl.closeModal()">
+        &times;</span>
+    <h1 class="fg-white">Alberta Clark</h1>
+  </section>
+  <!--End Jumbotron Mobile View-->
+
   <section class="item-details">
-    <h6>Albums</h6>
+    <h6 class="modal-content-lg-only">Albums</h6>
     <hr>
-    <article >
+
+    <!--Article Desktop view-->
+    <article class="modal-article-lg-only">
       <div>
         <img src="../images/toDelete3.png" style="width: 100px" alt="Track">
       </div>
@@ -20,24 +37,20 @@
         <div class="track-length">2017</div>
       </div>
     </article>
-    <article >
-      <div>
-        <img src="../images/toDelete3.png" style="width: 100px" alt="Track">
-      </div>
-      <div>
+    <!--End erticle desktop view-->
+
+    <!--Article mobile view-->
+    <article class="modal-article-sm-only">
+
         <div class="album-track-title">Little Frictions</div>
         <div class="track-length">2017</div>
-      </div>
     </article>
-    <article >
-      <div>
-        <img src="../images/toDelete3.png" style="width: 100px" alt="Track">
-      </div>
-      <div>
+    <article class="modal-article-sm-only">
+
         <div class="album-track-title">Little Frictions</div>
         <div class="track-length">2017</div>
-      </div>
     </article>
+    <!--End article mobile view-->
 
   </section>
 </div>

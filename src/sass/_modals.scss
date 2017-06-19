@@ -16,7 +16,6 @@
 .modal-content {
   background-color: #fefefe;
   margin: 2% auto;
-  width: 41rem;
   padding-bottom: 1.5%;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -26,6 +25,12 @@
     margin-top: -80px;
     margin-left: 33px;
   }
+  @media screen and (max-width: 30rem) {
+    width: 20rem;
+  }
+  @media screen and (min-width: 31rem) {
+    width: 41rem;
+  }
 }
 
 .modal-jumbotron {
@@ -34,33 +39,97 @@
 
 //Motel's item
 .item-details {
-  margin: 2% 5%;
-  article {
+  @media screen and (max-width: 30rem) {
+    margin: 2% 5%;
+    article {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (min-width: 31rem) {
+    margin: 2% 5%;
+    article {
+      display: flex;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+//Adapt the modal
+.modal-content-lg-only {
+  @media screen and (max-width: 30rem) {
+    display: none!important;
+  }
+  @media screen and (min-width: 31rem) {
+    display: block!important;
+  }
+}
+
+.modal-content-sm-only {
+  @media screen and (max-width: 30rem) {
+    display: block!important;
+  }
+  @media screen and (min-width: 31rem) {
+    display: none!important;
+  }
+}
+
+.modal-article-lg-only {
+  @media screen and (max-width: 30rem) {
+    display: none!important;
+  }
+  @media screen and (min-width: 31rem) {
+    display: flex!important;
+  }
+}
+
+.modal-article-sm-only {
+  @media screen and (max-width: 30rem) {
     display: flex;
-    margin-bottom: 15px;
+  }
+  @media screen and (min-width: 31rem) {
+    display: none;
   }
 }
 
 //The single track or album
 .album-track-title {
-  margin: 15px 15px 10px 15px;
-  font-weight:bolder;
-font-size:20px
+  font-weight: bolder;
+  @media screen and (max-width: 30rem) {
+    margin:0;
+    font-size: 18px
+  }
+  @media screen and (min-width: 31rem) {
+    margin: 15px 15px 10px 15px;
+    font-size: 20px
+  }
 }
 
 .track-length {
-  margin-left: 15px
+  @media screen and (max-width: 30rem) {
+    margin:0;
+  }
+  @media screen and (min-width: 31rem) {
+    margin-left: 15px
+  }
 }
 
 // The Close Button
 .close {
   color: #fff;
-  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; // margin-top: -18px;
-  font-size: 62px;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
   font-weight: lighter;
   position: absolute;
-  margin-top: -43.5%;
-  margin-left: 92.5%;
+  @media screen and (max-width: 30rem) {
+    font-size: 52px;
+    margin-top: -48%;
+    margin-left: 90%;
+  }
+  @media screen and (min-width: 31rem) {
+    font-size: 62px;
+    margin-top: -43.5%;
+    margin-left: 92.5%;
+  }
 }
 
 .close:hover,
