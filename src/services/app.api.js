@@ -39,6 +39,50 @@ class ApiFactory {
       }
     });
   }
+  /**
+   * Get Detail of a specific album
+   *
+   * @param {string} id
+   *
+   * @memberof ApiFactory
+   */
+  getAlbumDetails(id) {
+    const url = this._AppConstants.getAlbumDetails + id;
+
+    this.getDetails(url);
+  }
+
+  /**
+   * Get details of specific album
+   *
+   * @param {string} id
+   *
+   * @memberof ApiFactory
+   */
+  getArtistDetails(id) {
+    const url = this._AppConstants.getArtistDetails + id;
+
+    this.getDetails(url);
+  }
+
+  /**
+   * Sent Get query to spotify API
+   *
+   * @param {string} url
+   * @returns Http response result from Spotify Api
+   *
+   * @memberof ApiFactory
+   */
+  getDetails(url) {
+    return this._$resource(url, {}, {
+      query: {
+        method: 'GET',
+        headers: {
+          Authorization: 'Bearer ' + this._JWT.get()
+        }
+      }
+    });
+  }
 }
 
 export default ApiFactory;
