@@ -33,6 +33,7 @@ class MusicItemController {
   openModal(id) {
     this.itemId = id;
     this.albumModal.style.display = "block";
+    document.body.style.overflow = "hidden";
   }
 
   loadNextArtistsOrAlbums() {

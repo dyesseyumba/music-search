@@ -12,6 +12,8 @@ class MusicAlbumsController {
 
     console.log(this.itemId)
     this.albumModal.style.display = "none";
+
+    document.body.style.overflow = "auto";
   }
 }
 
