@@ -6,6 +6,6 @@ import MusicListCtrl from './music-list.controller';
 angular.module('app.music-list', []);
 
 //Create musicList component;
-angular.module('app.music-list', [])
+angular.module('app.music-list')
   .controller('MusicListController', MusicListCtrl)
   .component('musicList', musicList);

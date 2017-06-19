@@ -16,7 +16,7 @@ import appRun from './core/app.run';
 import './layout';
 import './home';
 import './music-list';
-import './music-detail';
+import './music-albums';
 import './services';
 
 // Create and bootstrap application
@@ -25,7 +25,7 @@ const requires = [
   'app.layout',
   'app.home',
   'app.music-list',
-  'app.music-detail',
+  'app.music-albums',
   'custom-services',
   'duScroll',
   'ngAnimate',

@@ -115,8 +115,13 @@ class MusicItemController {
   }
 
   //Open the modal
-  closeModal(modal) {
-    modal.style.display = "none";
+  // closeModal(modal) {
+  //   modal.style.display = "none";
+  // }
+
+  openModal() {
+    debugger;
+    // this.musicAlbumsCtrl.onOpenModal('ok');
   }
 }
 
