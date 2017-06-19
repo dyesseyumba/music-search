@@ -46,9 +46,9 @@ class MusicItemController {
         this._JWT.login();
     });
 
-    var modal = document.getElementById('music-detail');
-    var btn = document.getElementById("myBtn");
-    var span = document.getElementsByClassName("close")[0];
+    this.albumModal = document.getElementById('music-album');
+    // var btn = document.getElementById("myBtn");
+    // var span = document.getElementsByClassName("close")[0];
 
     //     // When the user clicks on the button, open the modal
     // btn.onclick = () => {
@@ -110,18 +110,13 @@ class MusicItemController {
   }
 
   //close the modal
-  openModal(modal) {
-    modal.style.display = "block";
+  openModal() {
+    this.albumModal.style.display = "block";
   }
 
   //Open the modal
-  // closeModal(modal) {
-  //   modal.style.display = "none";
-  // }
-
-  openModal() {
-    debugger;
-    // this.musicAlbumsCtrl.onOpenModal('ok');
+  closeModal(modal) {
+    modal.style.display = "none";
   }
 }
 
