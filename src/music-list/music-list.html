@@ -1,7 +1,7 @@
 <section ng-cloak>
   <div class="wrapper">
     <div class="row">
-      <div class="col-3" ng-repeat="result in $ctrl.spotifyResults" ng-click="$ctrl.openModal(result.id)">
+      <div class="col-3" ng-repeat="result in $ctrl.spotifyResults" ng-click="$ctrl.openModal(result.id, result.type)">
         <div class="item-block">
           <img class="img-fluid img-item-label" ng-if="result.images[1] != null" ng-src="{{result.images[1].url}}" alt="Spotify item">
           <img class="img-fluid img-item-icon" ng-if="result.type === 'artist'" src="../images/artist-icon@2x.png" />
@@ -45,7 +45,9 @@
 </section>
 
 <div id="music-album" class="modal">
+  <music-albums item-id="{{$ctrl.itemId}}"></music-albums>
+</div>
 
-  <music-albums item-id="{{$ctrl.itemId}}" ></music-albums>
-
+<div id="music-artist" class="modal">
+  <music-artists item-id="{{$ctrl.itemId}}"></music-albums>
 </div>

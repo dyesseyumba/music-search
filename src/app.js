@@ -17,6 +17,7 @@ import './layout';
 import './home';
 import './music-list';
 import './music-albums';
+import './musics-artists';
 import './services';
 
 // Create and bootstrap application
@@ -25,6 +26,7 @@ const requires = [
   'app.layout',
   'app.home',
   'app.music-list',
+  'app.music-artists',
   'app.music-albums',
   'custom-services',
   'duScroll',

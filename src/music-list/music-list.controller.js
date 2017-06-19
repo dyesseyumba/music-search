@@ -13,6 +13,7 @@ class MusicItemController {
     this.musicRange = [];
     this.spotifyResults = [];
     this.page = 0;
+    this.modal = {};
   }
 
 
@@ -25,17 +26,30 @@ class MusicItemController {
   $onInit() {
 
     this.loadArtistsOrAlbums(0);
-
-    this.albumModal = document.getElementById('music-album');
   }
 
-  //Open the modal
-  openModal(id) {
+  /**
+   * Open artist or album modal
+   *
+   * @param {string} id
+   * @param {string} type
+   *
+   * @memberof MusicItemController
+   */
+  openModal(id, type) {
+    const modalId = type === "artist" ? "music-artist" : "music-album";
+
+    this.modal = document.getElementById(modalId);
     this.itemId = id;
-    this.albumModal.style.display = "block";
+    this.modal.style.display = "block";
     document.body.style.overflow = "hidden";
   }
 
+  /**
+   * Call next artist or albums from spotify api
+   *
+   * @memberof MusicItemController
+   */
   loadNextArtistsOrAlbums() {
     this.page++;
     this.loadArtistsOrAlbums(this.page * 6);
@@ -57,8 +71,6 @@ class MusicItemController {
 
       this.musicRange = [...albums, ...artists].sort(this.compareByName);
       this.spotifyResults = [...this.spotifyResults, ...this.musicRange];
-
-      console.log(this.spotifyResults)
 
     }, (response) => {
       if (response.status === 401 || response.status === 403 || response.status === 419 || response.status === 440)
