@@ -84,14 +84,18 @@ class MusicArtistsController {
         }
 
         albums.push(album);
-
-        this.albums = albums;
       });
+
+      this.albums = albums.filter(this.filterByName);
 
     }, (response) => {
       if (response.status === 401 || response.status === 403 || response.status === 419 || response.status === 440)
         this._JWT.login();
     });
+  }
+
+  filterByName(album, index, array) {
+    return array.map(a => a.name).indexOf(album.name) === index;
   }
 }
 
