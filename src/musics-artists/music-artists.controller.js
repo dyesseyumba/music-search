@@ -80,7 +80,8 @@ class MusicArtistsController {
       response.items.forEach((i) => {
         const album = {
           name: i.name,
-          images: i.images
+          images: i.images,
+          id: i.id
         }
 
         albums.push(album);
@@ -88,12 +89,27 @@ class MusicArtistsController {
 
       this.albums = albums.filter(this.filterByName);
 
+      this.albums.forEach((a) => {
+        this._ApiFactory.getAlbumDetails(a.id).query((response) => {
+          a.year = response.release_date.slice(0,4);
+        });
+      })
+
     }, (response) => {
       if (response.status === 401 || response.status === 403 || response.status === 419 || response.status === 440)
         this._JWT.login();
     });
   }
 
+  /**
+   * Callback to filter albums by name
+   *
+   * @param {object} album
+   * @param {number} index
+   * @param {array} array
+   * @returns boolean test value
+   * @memberof MusicArtistsController
+   */
   filterByName(album, index, array) {
     return array.map(a => a.name).indexOf(album.name) === index;
   }
