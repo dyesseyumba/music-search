@@ -100,10 +100,10 @@
 
 .modal-article-sm-only {
   @media screen and (max-width: 30rem) {
-    display: flex;
+    display: flex!important;
   }
   @media screen and (min-width: 31rem) {
-    display: none;
+    display: none!important;
   }
 }
 

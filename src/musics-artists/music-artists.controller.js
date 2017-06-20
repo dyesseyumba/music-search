@@ -8,6 +8,7 @@ class MusicArtistsController {
     this.artist = {
       images: []
     }
+    this.albums = [];
   }
 
   $onChanges() {
@@ -22,7 +23,6 @@ class MusicArtistsController {
 
   //Close the modal
   closeModal() {
-    console.log(this.itemId)
     this.artistModal.style.display = "none";
 
     document.body.style.overflow = "auto";
@@ -46,8 +46,13 @@ class MusicArtistsController {
   loadArtistAlbums() {
     this._ApiFactory.getArtistAlbums(this.itemId).query({}, (response) => {
 
-
-      console.log(response);
+      response.items.forEach((i) => {
+        const album = {
+          name: i.name,
+          images: i.images
+        }
+        this.albums.push(album);
+      });
 
     }, (response) => {
       if (response.status === 401 || response.status === 403 || response.status === 419 || response.status === 440)

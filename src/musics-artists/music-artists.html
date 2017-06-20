@@ -31,12 +31,13 @@
     <hr>
 
     <!--Article Desktop view-->
-    <article class="modal-article-lg-only">
+    <article ng-repeat="album in $ctrl.albums" class="modal-article-lg-only">
       <div>
-        <img src="../images/toDelete3.png" style="width: 100px" alt="Track">
+        <!--<img src="../images/toDelete3.png" style="width: 100px" alt="Track">-->
+        <img ng-src="{{album.images[2].url}}" style="width: 100px" alt="Track">
       </div>
       <div>
-        <div class="album-track-title">Little Frictions</div>
+        <div class="album-track-title" ng-bind="album.name"></div>
         <div class="track-length">2017</div>
       </div>
     </article>
