@@ -52,16 +52,24 @@ class MusicAlbumsController {
     });
   }
 
-loadAlbumTracks() {
+  /**
+   * Load tracks of specifics albums from spotify API
+   *
+   * @memberof MusicAlbumsController
+   */
+  loadAlbumTracks() {
     this._ApiFactory.getAlbumsTracks(this.albumId).query({}, (response) => {
 
+      const tracks = [];
       response.items.forEach((i) => {
         const track = {
           name: i.name,
-          images: i.images
+          images: i.images,
+          duration: this.convertToMinutesSeconds(i.duration_ms)
         }
-        this.tracks.push(track);
+        tracks.push(track);
       });
+      this.tracks = tracks;
 
     }, (response) => {
       if (response.status === 401 || response.status === 403 || response.status === 419 || response.status === 440)
@@ -78,6 +86,19 @@ loadAlbumTracks() {
     this.albumModal.style.display = "none";
 
     document.body.style.overflow = "auto";
+  }
+
+  /**
+   * Convert milliseconds to minutes secondes
+   *
+   * @param {number} milliSeconds
+   * @returns String of readable minutes seconds
+   * @memberof MusicAlbumsController
+   */
+  convertToMinutesSeconds(milliSeconds) {
+    var minutes = Math.floor(milliSeconds / 60000);
+    var seconds = ((milliSeconds % 60000) / 1000).toFixed(0);
+    return minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
   }
 }
 
