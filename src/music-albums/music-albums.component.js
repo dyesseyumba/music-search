@@ -3,7 +3,7 @@ const template = require('./music-albums.html');
 // The music albums component
 const musicAlbums = {
   bindings: {
-     itemId: '@'
+     albumId: '@'
   },
   template,
   controller: 'MusicAlbumsController'

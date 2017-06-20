@@ -1,3 +1,8 @@
+/**
+ * The music Artists controller
+ *
+ * @class MusicArtistsController
+ */
 class MusicArtistsController {
   constructor(ApiFactory, JWT) {
     'ngInject';
@@ -11,26 +16,46 @@ class MusicArtistsController {
     this.albums = [];
   }
 
-  $onChanges() {
-    this.artistModal = document.getElementById('music-artist');
+  /**
+   *  Called whenever one-way bindings are updated
+   *
+   * @param {objecct} changesObj
+   *
+   * @memberof MusicArtistsController
+   */
+  $onChanges(changesObj) {
 
-    if (this.itemId !== null && this.itemId !== "") {
-      this.loadArtistDetails();
+    if (changesObj.artistId) {
+      this.artistModal = document.getElementById('music-artist');
 
-      this.loadArtistAlbums();
+      if (changesObj.artistId.currentValue !== "" && changesObj.artistId.previousValue !== changesObj.artistId.currentValue) {
+
+        this.loadArtistDetails();
+
+        this.loadArtistAlbums();
+      }
     }
   }
 
-  //Close the modal
+  /**
+   * Close the modal
+   *
+   * @memberof MusicArtistsController
+   */
   closeModal() {
     this.artistModal.style.display = "none";
 
     document.body.style.overflow = "auto";
   }
 
+  /**
+   * Load the artist details from spotify API
+   *
+   * @memberof MusicArtistsController
+   */
   loadArtistDetails() {
 
-    this._ApiFactory.getArtistDetails(this.itemId).query({}, (response) => {
+    this._ApiFactory.getArtistDetails(this.artistId).query({}, (response) => {
 
       this.artist = {
         name: response.name,
@@ -43,15 +68,24 @@ class MusicArtistsController {
 
   }
 
+  /**
+   * Load the album details from spotify api
+   *
+   * @memberof MusicArtistsController
+   */
   loadArtistAlbums() {
-    this._ApiFactory.getArtistAlbums(this.itemId).query({}, (response) => {
+    this._ApiFactory.getArtistAlbums(this.artistId).query({}, (response) => {
+      const albums = []
 
       response.items.forEach((i) => {
         const album = {
           name: i.name,
           images: i.images
         }
-        this.albums.push(album);
+
+        albums.push(album);
+
+        this.albums = albums;
       });
 
     }, (response) => {

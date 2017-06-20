@@ -40,7 +40,8 @@ class MusicItemController {
     const modalId = type === "artist" ? "music-artist" : "music-album";
 
     this.modal = document.getElementById(modalId);
-    this.itemId = id;
+    this.artistId = type === "artist" ? id : "";
+    this.albumId = type === "album" ? id : "";
     this.modal.style.display = "block";
     document.body.style.overflow = "hidden";
   }

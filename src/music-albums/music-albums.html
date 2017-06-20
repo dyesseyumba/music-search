@@ -4,11 +4,13 @@
   <!--Jumbotron Desktop View-->
   <section class="modal-jumbotron modal-content-lg-only">
 
-    <img src="../images/toDelete2.png" style="width: 100%" alt="Artist">
+    <div class="modal-jumbotron-block">
+      <img class="modal-jumbotron-imd" ng-src="{{$ctrl.album.images[0].url}}" alt="Artist">
+    </div>
 
     <span class="close" ng-click="$ctrl.closeModal()">
         &times;</span>
-    <h1 class="fg-white">Alberta Clark</h1>
+    <h1 class="fg-white" ng-bind="$ctrl.album.name"></h1>
   </section>
   <!--End Jumbotron Desktop View-->
 
@@ -24,16 +26,17 @@
   <!--End Jumbotron Mobile View-->
 
   <section class="item-details">
-    <h6 class="modal-content-lg-only">Albums</h6>
+    <h6 class="modal-content-lg-only">Tracks</h6>
     <hr>
 
     <!--Article Desktop view-->
-    <article class="modal-article-lg-only">
+    <article ng-repeat="track in $ctrl.tracks" class="modal-article-lg-only">
       <div>
-        <img src="../images/toDelete3.png" style="width: 100px" alt="Track">
+        <!--<img src="../images/toDelete3.png" style="width: 100px" alt="Track">-->
+        <!--<img ng-src="{{track.images[2].url}}" style="width: 100px" alt="Track">-->
       </div>
       <div>
-        <div class="album-track-title">Little Frictions</div>
+        <div class="album-track-title" ng-bind="track.name"></div>
         <div class="track-length">2017</div>
       </div>
     </article>
@@ -42,13 +45,13 @@
     <!--Article mobile view-->
     <article class="modal-article-sm-only">
 
-        <div class="album-track-title">Little Frictions</div>
-        <div class="track-length">2017</div>
+      <div class="album-track-title">Little Frictions</div>
+      <div class="track-length">2017</div>
     </article>
     <article class="modal-article-sm-only">
 
-        <div class="album-track-title">Little Frictions</div>
-        <div class="track-length">2017</div>
+      <div class="album-track-title">Little Frictions</div>
+      <div class="track-length">2017</div>
     </article>
     <!--End article mobile view-->
 
