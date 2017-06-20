@@ -5,8 +5,10 @@
  * @param {any} $urlRouterProvider
  * @param {any} $locationProvider
  */
-const AppConfig = (AppConstants, $stateProvider, $urlRouterProvider) => {
+const AppConfig = (AppConstants, $stateProvider, $locationProvider) => {
   'ngInject';
+
+//  $locationProvider.html5Mode(true);
 
   const homeState = {
     name: 'home',
@@ -25,12 +27,9 @@ const AppConfig = (AppConstants, $stateProvider, $urlRouterProvider) => {
       pageTitle: 'Search - ' + AppConstants.appName
     }
   }
-
-
   $stateProvider.state(homeState);
   $stateProvider.state(musicListState);
 
-  $urlRouterProvider.otherwise('/');
 }
 
 export default AppConfig;

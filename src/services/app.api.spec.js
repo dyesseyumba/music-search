@@ -1,44 +1,55 @@
-
 /* eslint-disable no-undef */
-describe('Api', function() {
-  var $httpBackend;
-  var Phone;
-  var phonesData = [
-    {name: 'Phone X'},
-    {name: 'Phone Y'},
-    {name: 'Phone Z'}
-  ];
+describe('Api', () => {
+  let
+    $httpBackend,
+    resultsData = {
+      name: 'Alberta Clarck'
+    },
+    AppConstants,
+    ApiFactory;
 
-  // Add a custom equality tester before each test
-  // beforeEach(function() {
-  //   jasmine.addCustomEqualityTester(angular.equals);
-  // });
+  beforeEach(function () {
+    jasmine.addCustomEqualityTester(angular.equals);
+  });
 
-  // Load the module that contains the `Phone` service before each test
-  beforeEach(module('core.phone'));
+  beforeEach(angular.mock.module('app'));
 
-  // Instantiate the service and "train" `$httpBackend` before each test
-  beforeEach(inject(function(_$httpBackend_, _Phone_) {
+  beforeEach(angular.mock.inject((_$httpBackend_, _AppConstants_, _ApiFactory_) => {
     $httpBackend = _$httpBackend_;
-    $httpBackend.expectGET('phones/phones.json').respond(phonesData);
 
-    Phone = _Phone_;
+    AppConstants = _AppConstants_;
+
+    $httpBackend.expectGET(AppConstants.getByArtistOrAlbumUri).respond(resultsData);
+
+    ApiFactory = _ApiFactory_;
   }));
 
   // Verify that there are no outstanding expectations or requests after each test
-  afterEach(function () {
+  afterEach(() => {
     $httpBackend.verifyNoOutstandingExpectation();
     $httpBackend.verifyNoOutstandingRequest();
   });
 
-  it('should fetch the phones data from `/phones/phones.json`', function() {
-    var phones = Phone.query();
+//Verify resource getByArtistOrAlbum
+  it('should fetch the artist or album data from `spotify Api`', function () {
 
-    expect(phones).toEqual([]);
+    var results = ApiFactory.getByArtistOrAlbum().query();
+
+    expect(results).toEqual({});
 
     $httpBackend.flush();
-    expect(phones).toEqual(phonesData);
+    expect(results).toEqual(resultsData);
+  });
+
+  it('should query the artist or album data from `spotify Api` ', function () {
+
+    var results = ApiFactory.getByArtistOrAlbum('Clarck').query();
+
+    expect(results).toEqual({});
+    expect(results).toEqual({});
+
+    $httpBackend.flush();
+    expect(results).toEqual(resultsData);
   });
 
 });
-

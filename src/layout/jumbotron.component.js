@@ -1,7 +1,8 @@
 const template = require('./jumbotron.html');
 
 const jumbotron = {
-  template
+  template,
+  controller: 'JumbotronController'
 }
 
 export default jumbotron;

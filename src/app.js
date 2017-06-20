@@ -1,6 +1,11 @@
 import angular from 'angular';
 import 'angular-resource';
 import 'angular-ui-router';
+import 'angular-animate';
+import 'angular-scroll';
+import 'angular-toastr';
+
+require ('style-loader!css-loader!../node_modules/angular-toastr/dist/angular-toastr.css');
 
 // Import our app config files
 import constants from './core/app.constants';
@@ -11,7 +16,8 @@ import appRun from './core/app.run';
 import './layout';
 import './home';
 import './music-list';
-import './music-detail';
+import './music-albums';
+import './musics-artists';
 import './services';
 
 // Create and bootstrap application
@@ -20,8 +26,12 @@ const requires = [
   'app.layout',
   'app.home',
   'app.music-list',
-  'app.music-detail',
-  'custom-services'
+  'app.music-artists',
+  'app.music-albums',
+  'custom-services',
+  'duScroll',
+  'ngAnimate',
+  'toastr'
 ];
 
 angular.module('app', requires);

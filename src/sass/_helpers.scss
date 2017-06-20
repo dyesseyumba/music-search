@@ -8,7 +8,7 @@
 }
 
 .bg-black-result {
-  background-color: #383A49!important;
+  background-color: #383A49;
 }
 
 .fg-black-text-result {
@@ -35,3 +35,10 @@
   display: flex;
   justify-content: center;
 }
+
+//blur 5px
+.blur-5px {
+  filter: blur(5px);
+}
+
+

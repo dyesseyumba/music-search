@@ -1,9 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 html {
-	font-size: 100%;
+  font-size: 100%;
 }
 
 body {
-	font-family: $fontName;
-	font-size: $baseFontSize;
-	line-height: 1.1;
+  font-family: $fontName;
+  font-size: $baseFontSize;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 39px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: $baseFontSize;
+  font-weight: bold;
+}
+
+hr{
+  border: 0;
+	height: 1px;
+	background-color: #D3D3D4;
+  margin: 20px 0 20px 0;
 }

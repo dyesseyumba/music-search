@@ -5,7 +5,13 @@ body {
 footer {
   color: #ffffff;
   text-align: center;
-  margin: 30px 0 30px 0
+  padding: 30px 0 30px 0; // margin: 0 2rem 0 2rem
+  @media screen and (min-width: 0) and (max-width: 39em) {
+    margin:0;
+  }
+  @media screen and (min-width:40em) {
+    margin: 0 2rem 0 2rem;
+  }
 }
 
 input[type=search] {
@@ -34,6 +40,7 @@ input[type=search] {
 
 //jumbotron
 #jumbotron {
+  height: 99.6vh;
   @media screen and (min-width: 30em) {
     margin: 0 2rem 0 2rem;
   }
@@ -69,8 +76,7 @@ input[type=search] {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  margin-top: -40px;
+  width: 100%; // margin-top: -40px;
   img {
     @media screen and (min-width: 0px) {
       margin: 9rem 0 5rem 0;
@@ -83,11 +89,11 @@ input[type=search] {
 
 #jumotron-line-3 {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   width: 100%;
-  margin-top: -10px;
-  padding-bottom: 30px;
+  cursor: pointer;
+  margin-top: 5vh;
   img {
     width: 50%;
     @include centered-image;
@@ -106,7 +112,6 @@ input[type=search] {
   }
   input[type=search],
   input[type=submit] {
-    font-family: $fontNameBold;
     font-size: $baseFontSize;
   }
   input[type=submit] {
@@ -173,7 +178,10 @@ input[type=search] {
   display: flex;
   align-items: center;
   padding-left: 1rem;
-  font-family: $fontNameBold;
+
+  font-size: $baseFontSize;
+
+    font-weight: bold;
   @media screen and (max-width: 30rem) {
     height: 70px;
     border-radius: 0 5px 5px 0;
@@ -185,47 +193,84 @@ input[type=search] {
 }
 
 .img-item-label {
-  @media screen and (max-width: 30rem) {
-    border-radius: 5px 0 0 5px;
-  }
-  @media screen and (min-width: 31rem) {
+
+  @media screen and (min-width: 71rem) and (max-width: 100rem) {
+    max-height:260px;
     border-radius: 5px 5px 0 0;
+  }
+  @media screen and (min-width: 50rem) and (max-width: 70rem) {
+    max-height: 200px;
+    border-radius: 5px 5px 0 0;
+  }
+  @media screen and (min-width: 40rem) and (max-width: 49.9rem) {
+    max-height: 130px;
+    border-radius: 5px 5px 0 0;
+  }
+  @media screen and (min-width: 30rem) and (max-width: 39.9rem) {
+    max-height: 110px;
+    border-radius: 5px 5px 0 0;
+  }
+  @media (min-width: 0) and (max-width: 29.9rem) {
+    max-height: 70px;
+    border-radius: 5px 0 0 5px;
   }
 }
 
+.img-item-empty {
+  width: 50%;
+  position: absolute;
+}
+
 .img-item-icon {
-   @media screen and (min-width: 0) and (max-width: 29.9rem) {
+  @media screen and (min-width: 0) and (max-width: 29.9rem) {
     width: 20%;
-    margin-top: -20px;
-    margin-left: 8px;
+    margin-top: 30%;
+    margin-left: -39%;
     position: absolute;
   }
-   @media screen and (min-width: 30rem) and (max-width: 49.9rem) {
+  @media screen and (min-width: 30rem) and (max-width: 49.9rem) {
     width: 10%;
-    margin-top: -25px;
-    margin-left: 8px;
+    margin-top: 40%;
+    margin-left: -39%;
     position: absolute;
   }
   @media screen and (min-width: 50rem) {
     width: 10%;
-    margin-top: -40px;
-    margin-left: 15px;
+    margin-top: 40%;
+    margin-left: -39%;
     position: absolute;
   }
 }
 
 .item-block {
+  background: #53556D;
   position: relative;
-  @media screen and (max-width: 30rem) {
-    float:left;
-    width: 70px
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  border-radius: 5px 5px 0 0;
+  @media screen and (min-width: 71rem) and (max-width: 100rem) {
+    height:260px;
+  }
+  @media screen and (min-width: 50rem) and (max-width: 70rem) {
+    height: 200px;
+  }
+  @media screen and (min-width: 40rem) and (max-width: 49.9rem) {
+    height: 130px;
+  }
+  @media screen and (min-width: 30rem) and (max-width: 39.9rem) {
+    height: 110px;
+  }
+  @media (min-width: 0) and (max-width: 29.9rem) {
+    float: left;
+    width: 70px;
+    height: 70px;
   }
 }
 
 //Button
 .btn {
   @include button-common;
-  font-family: $fontNameBold;
   font-size: $baseFontSize;
   height: 40px;
   padding: 10px 20px 10px 20px;
