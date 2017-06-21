@@ -10,9 +10,9 @@ describe('Jumbotron', () => {
 
   beforeEach(angular.mock.module('app.layout'));
 
-  beforeEach(inject(() => {
+  beforeEach(inject((_$document_, _$anchorScroll_) => {
     makeController = () => {
-      return new JumbotronController();
+      return new JumbotronController(_$document_, _$anchorScroll_);
     };
   }));
 

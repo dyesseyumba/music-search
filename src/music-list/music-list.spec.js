@@ -47,11 +47,45 @@ describe('MusicList', () => {
       expect(musicListController.$onInit).toBeDefined();
     });
 
-
-    it('openModal should be defined', function () {
+    it('loadNextArtistsOrAlbums should be defined', function () {
       let musicListController = makeController();
+      musicListController.$onInit();
 
-      expect(musicListController.openModal).toBeDefined();
+      expect(musicListController.loadNextArtistsOrAlbums).toBeDefined();
+    });
+
+
+    describe('Album and artist modal', () => {
+
+      beforeAll(function () {
+        var template = MusicListTemplate;
+
+        document.body.insertAdjacentHTML(
+          'afterbegin',
+          template);
+      });
+
+      it('openModal should be defined', function () {
+        let musicListController = makeController();
+
+        expect(musicListController.openModal).toBeDefined();
+      });
+
+      it('Should open artist modal', function () {
+
+        let musicListController = makeController();
+        musicListController.openModal("4nmmSzq9V6UEn0j3KL6jSn", "artist")
+
+        expect(musicListController.modal.style.display).toEqual('block');
+      });
+
+      it('Should open artist modal', function () {
+
+        let musicListController = makeController();
+        musicListController.openModal("4nmmSzq9V6UEn0j3KL6jSn", "album")
+
+        expect(musicListController.modal.style.display).toEqual('block');
+      });
     });
 
   });

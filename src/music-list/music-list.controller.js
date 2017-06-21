@@ -65,7 +65,6 @@ class MusicItemController {
    */
   loadArtistsOrAlbums(offset) {
     this._ApiFactory.getByArtistOrAlbum(this._$stateParams.value, offset).query({}, (response) => {
-      // this._ApiFactory.getByArtistOrAlbum().query({}, (response) => {
 
       const albums = this.matchSpotifyResults(response.albums.items);
       const artists = this.matchSpotifyResults(response.artists.items);
@@ -80,7 +79,7 @@ class MusicItemController {
   }
 
   /**
-   * Match the spotify results to the music items
+   * Match and format the spotify results to use it in the DOM
    *
    * @param {any} results
    * @returns Matched result
