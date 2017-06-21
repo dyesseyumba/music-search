@@ -40,16 +40,4 @@ describe('Api', () => {
     $httpBackend.flush();
     expect(results).toEqual(resultsData);
   });
-
-  it('should query the artist or album data from `spotify Api` ', function () {
-
-    var results = ApiFactory.getByArtistOrAlbum('Clarck').query();
-
-    expect(results).toEqual({});
-    expect(results).toEqual({});
-
-    $httpBackend.flush();
-    expect(results).toEqual(resultsData);
-  });
-
 });

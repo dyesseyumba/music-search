@@ -54,33 +54,5 @@ describe('MusicList', () => {
       expect(musicListController.openModal).toBeDefined();
     });
 
-    it('Should open the modal', function () {
-
-      let musicListController = makeController();
-      const modal = document.getElementById('music-detail');
-
-      musicListController.openModal(modal)
-
-      expect(modal.style.display).toEqual('block');
-    });
-
-    it('closeModal should be defined', function () {
-      let musicListController = makeController();
-
-      expect(musicListController.closeModal).toBeDefined();
-    });
-
-
-
-    it('Should close the modal', function () {
-
-      let musicListController = makeController();
-      const modal = document.getElementById('music-detail');
-
-      musicListController.closeModal(modal)
-
-      expect(modal.style.display).toEqual('none');
-    });
-
   });
 });
