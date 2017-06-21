@@ -84,7 +84,7 @@ describe('MusicAlbums', () => {
     });
   });
 
-  Test all call from ApiFactory
+  // Test all call from ApiFactory
   describe('APIfactory', () => {
     let $httpBackend, AppConstants;
 
@@ -102,38 +102,33 @@ describe('MusicAlbums', () => {
       let musicAlbumsController = makeController();
 
       musicAlbumsController.albumId = '4RnBFZRiMLRyZy0AzzTg2C';
-      musicAlbumsController.loadAlbumDetails();
+      musicAlbumsController.loadAlbumsDetails();
 
-      expect(musicAlbumsController.loadAlbumDetails).toBeDefined();
-      expect(musicAlbumsController.album).toEqual({
-        images: []
-      });
+      expect(musicAlbumsController.loadAlbumsDetails).toBeDefined();
+      expect(musicAlbumsController.album).toEqual({});
 
       $httpBackend.flush();
-      expect(musicAlbumsController.album.name).toEqual("Run The Jewels");
+      expect(musicAlbumsController.album.name).toEqual('Run the Jewels 3');
     });
 
-    it('Should Call spotify Api to load album details', function () {
+    it('Should Call spotify Api to tracks', function () {
       let musicAlbumsController = makeController();
 
-
-
-      $httpBackend.whenGET(AppConstants.getAlbumDetails + '4RnBFZRiMLRyZy0AzzTg2C/albums')
-        .respond(require('../_mocks/albumAlbums.json'));
-
-      $httpBackend.whenGET(/https:\/\/api\.spotify\.com\/v1\/albums\/(.+)/)
-        .respond(require('../_mocks/album.json'));
+      $httpBackend.expectGET(AppConstants.getAlbumDetails + '4RnBFZRiMLRyZy0AzzTg2C/tracks')
+        .respond(require('../_mocks/tracks.json'));
 
       musicAlbumsController.albumId = '4RnBFZRiMLRyZy0AzzTg2C';
 
-      expect(musicAlbumsController.loadAlbumAlbums).toBeDefined();
-      expect(musicAlbumsController.albums).toEqual([]);
+      expect(musicAlbumsController.loadAlbumTracks).toBeDefined();
+      expect(musicAlbumsController.tracks).toEqual([]);
 
-      musicAlbumsController.loadAlbumAlbums();
+      musicAlbumsController.loadAlbumTracks();
       $httpBackend.flush();
 
-      expect(musicAlbumsController.albums.length).toEqual(14);
+      expect(musicAlbumsController.tracks.length).toEqual(12);
     });
+
+
 
   });
 });
