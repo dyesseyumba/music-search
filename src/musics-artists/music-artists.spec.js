@@ -34,7 +34,7 @@ describe('MusicArtists', () => {
     })
   });
 
-//Controller specs
+  //Controller specs
   describe('MusicArtistsController', function () {
 
     beforeAll(function () {
@@ -90,5 +90,58 @@ describe('MusicArtists', () => {
       expect(musicArtistsController.filterByName(album, 0, array)).toBe(true);
 
     });
+  });
+
+  //Test all call from ApiFactory
+  describe('APIfactory', () => {
+    let $httpBackend, AppConstants;
+
+    beforeEach(angular.mock.inject(function (_$httpBackend_, _AppConstants_) {
+      $httpBackend = _$httpBackend_;
+
+      AppConstants = _AppConstants_;
+    }));
+
+    it('Should Call spotify Api to load artist  details', function () {
+
+      $httpBackend.expectGET(AppConstants.getArtistDetails + '4RnBFZRiMLRyZy0AzzTg2C')
+        .respond(require('../_mocks/artist.json'));
+
+      let musicArtistsController = makeController();
+
+      musicArtistsController.artistId = '4RnBFZRiMLRyZy0AzzTg2C';
+      musicArtistsController.loadArtistDetails();
+
+      expect(musicArtistsController.loadArtistDetails).toBeDefined();
+      expect(musicArtistsController.artist).toEqual({
+        images: []
+      });
+
+      $httpBackend.flush();
+      expect(musicArtistsController.artist.name).toEqual("Run The Jewels");
+    });
+
+    it('Should Call spotify Api to load album details', function () {
+      let musicArtistsController = makeController();
+
+
+
+      $httpBackend.whenGET(AppConstants.getArtistDetails + '4RnBFZRiMLRyZy0AzzTg2C/albums')
+        .respond(require('../_mocks/artistAlbums.json'));
+
+      $httpBackend.whenGET(/https:\/\/api\.spotify\.com\/v1\/albums\/(.+)/)
+        .respond(require('../_mocks/album.json'));
+
+      musicArtistsController.artistId = '4RnBFZRiMLRyZy0AzzTg2C';
+
+      expect(musicArtistsController.loadArtistAlbums).toBeDefined();
+      expect(musicArtistsController.albums).toEqual([]);
+
+      musicArtistsController.loadArtistAlbums();
+      $httpBackend.flush();
+
+      expect(musicArtistsController.albums.length).toEqual(14);
+    });
+
   });
 });
