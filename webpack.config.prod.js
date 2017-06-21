@@ -92,11 +92,13 @@ export default {
       test: /\.scss$/,
       use: ExtractTextPlugin.extract({
         use: [{
-          loader: "css-loader"
+          loader: "css-loader",
+          options: {
+            minimize: true
+          }
         }, {
           loader: "fast-sass-loader"
         }],
-        // use style-loader in development
         fallback: "style-loader"
       })
     }, {
