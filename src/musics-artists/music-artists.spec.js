@@ -34,6 +34,7 @@ describe('MusicArtists', () => {
     })
   });
 
+//Controller specs
   describe('MusicArtistsController', function () {
 
     beforeAll(function () {
@@ -71,6 +72,23 @@ describe('MusicArtists', () => {
       musicArtistsController.closeModal();
 
       expect(musicArtistsController.artistModal.style.display).toEqual('none');
+    });
+
+    it('filterByName should return boolean', () => {
+
+      let musicArtistsController = makeController();
+
+      const album = {
+        name: 'Rise and fall'
+      }
+
+      const array = [album, {
+        name: 'Go and run'
+      }];
+
+      expect(musicArtistsController.filterByName(album, 1, array)).toBe(false);
+      expect(musicArtistsController.filterByName(album, 0, array)).toBe(true);
+
     });
   });
 });
