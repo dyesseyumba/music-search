@@ -9,7 +9,6 @@ describe('MusicList', () => {
 
   let makeController;
 
-
   beforeEach(angular.mock.module('app'));
   beforeEach(angular.mock.inject((_ApiFactory_, _JWT_, _$stateParams_) => {
     makeController = () => {
@@ -17,8 +16,8 @@ describe('MusicList', () => {
     };
   }));
 
-  //Template specs
-  describe('MusicListTemplate', () => {
+  //Component specs
+  describe('MusicListComponent', () => {
 
     const component = MusicListComponent;
 
@@ -49,12 +48,88 @@ describe('MusicList', () => {
 
     it('loadNextArtistsOrAlbums should be defined', function () {
       let musicListController = makeController();
-      musicListController.$onInit();
 
       expect(musicListController.loadNextArtistsOrAlbums).toBeDefined();
     });
 
+    it('matchSpotifyResults should be defined', function () {
+      let musicListController = makeController();
+      const results = require('../_mocks/results.json');
 
+      const albums = musicListController.matchSpotifyResults(results.albums.items);
+
+      expect(musicListController.loadNextArtistsOrAlbums).toBeDefined();
+      expect(albums.length).toEqual(6);
+    });
+
+    //Test the compareByName method
+    describe('compareByName method', () => {
+      const a = {
+        name: 'Jane Doe'
+      }
+      const b = {
+        name: 'John Doe'
+      }
+
+      it('compareByName should return -1', function () {
+        let musicListController = makeController();
+
+        const comparisonResult = musicListController.compareByName(a, b);
+
+        expect(musicListController.compareByName).toBeDefined();
+        expect(comparisonResult).toEqual(-1);
+      });
+
+      it('compareByName should return 1', function () {
+        let musicListController = makeController();
+
+        const comparisonResult = musicListController.compareByName(b, a);
+
+        expect(musicListController.compareByName).toBeDefined();
+        expect(comparisonResult).toEqual(1);
+      });
+    });
+
+    //Test all call from ApiFactory
+    describe('APIfactory', () => {
+      let $httpBackend, AppConstants;
+
+      beforeEach(angular.mock.inject(function (_$httpBackend_, _AppConstants_) {
+        $httpBackend = _$httpBackend_;
+
+        AppConstants = _AppConstants_;
+
+        $httpBackend.expectGET(AppConstants.getByArtistOrAlbumUri + 'run' + AppConstants.spotifyQueryType + '&offset=6')
+          .respond(require('../_mocks/results.json'));
+      }));
+
+      it('Should Call spotify Api to load artist or albums', function () {
+        let musicListController = makeController();
+
+        musicListController._$stateParams.value = 'run';
+        musicListController.loadArtistsOrAlbums(6);
+
+        expect(musicListController.loadArtistsOrAlbums).toBeDefined();
+        expect(musicListController.musicRange).toEqual([]);
+
+        $httpBackend.flush();
+        expect(musicListController.musicRange.length).toEqual(12);
+      });
+
+      it('loadNextArtistsOrAlbums should increment page variable', () => {
+
+        let musicListController = makeController();
+        musicListController.page = 0;
+        musicListController._$stateParams.value = 'run';
+
+        musicListController.loadNextArtistsOrAlbums();
+
+        expect(musicListController.page).toEqual(1);
+      });
+
+    });
+
+    //Test the artist and album modal
     describe('Album and artist modal', () => {
 
       beforeAll(function () {

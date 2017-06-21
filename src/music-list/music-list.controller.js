@@ -81,7 +81,7 @@ class MusicItemController {
   /**
    * Match and format the spotify results to use it in the DOM
    *
-   * @param {any} results
+   * @param {array} results
    * @returns Matched result
    *
    * @memberof MusicItemController
@@ -105,10 +105,10 @@ class MusicItemController {
   }
 
   /**
-   * Compare two music item to sort
+   * Compare two music object to sort them
    *
-   * @param {any} result a
-   * @param {any} result b
+   * @param {object} result a
+   * @param {object} result b
    * @returns comparison result
    *
    * @memberof MusicItemController

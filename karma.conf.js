@@ -97,6 +97,10 @@ module.exports = function (config) {
           test: /\.ico$/,
           exclude: /node_modules/,
           loader: 'url-loader?limit=1000&name=[name].[hash].[ext]'
+        }, {
+          test: /\.json$/,
+          exclude: /node_modules/,
+          loader: 'json-loader?name=[name].[hash].[ext]'
         }]
       }
     },
