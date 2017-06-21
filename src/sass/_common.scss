@@ -178,10 +178,8 @@ input[type=search] {
   display: flex;
   align-items: center;
   padding-left: 1rem;
-
   font-size: $baseFontSize;
-
-    font-weight: bold;
+  font-weight: bold;
   @media screen and (max-width: 30rem) {
     height: 70px;
     border-radius: 0 5px 5px 0;
@@ -193,7 +191,6 @@ input[type=search] {
 }
 
 .img-item-label {
-
   @media screen and (min-width: 71rem) and (max-width: 100rem) {
     max-height:260px;
     border-radius: 5px 5px 0 0;
@@ -247,7 +244,7 @@ input[type=search] {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
   border-radius: 5px 5px 0 0;
   @media screen and (min-width: 71rem) and (max-width: 100rem) {
     height:260px;

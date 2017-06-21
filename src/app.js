@@ -4,8 +4,10 @@ import 'angular-ui-router';
 import 'angular-animate';
 import 'angular-scroll';
 import 'angular-toastr';
+import 'angular-loading-bar';
 
 require ('style-loader!css-loader!../node_modules/angular-toastr/dist/angular-toastr.css');
+require ('style-loader!css-loader!../node_modules/angular-loading-bar/build/loading-bar.css');
 
 // Import our app config files
 import constants from './core/app.constants';
@@ -31,7 +33,8 @@ const requires = [
   'custom-services',
   'duScroll',
   'ngAnimate',
-  'toastr'
+  'toastr',
+  'angular-loading-bar'
 ];
 
 angular.module('app', requires);
