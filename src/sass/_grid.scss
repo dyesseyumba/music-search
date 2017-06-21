@@ -1,0 +1,90 @@
+// Global ruule for reset and box-sizing
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  @include border-box;
+}
+
+// Adapt font size to the screen
+html {
+  @media screen and (min-width: 1401px) {
+    font-size: 120%;
+  }
+  @media screen and (max-width: 1400px) {
+    font-size: 110%;
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: 100%;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 100%;
+  }
+  @media screen and (max-width: 640px) {
+    font-size: 95%;
+  }
+  @media screen and (max-width: 320px) {
+    font-size: 90%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  @media screen and (max-width: 800px) {
+    margin: .625rem;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row{
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+// Row and col responsive class
+.wrapper,
+.row {
+  @extend %clearfix;
+}
+
+[class*='col-'] {
+  float: left;
+  @media screen and (max-width: 30rem) {
+  padding: 1em 1em 0.5em 1em;
+  }
+  @media screen and (min-width: 31rem) {
+  padding: 3em 1em 1em 1em;
+  }
+  width: 100%;
+  min-height: 1px;
+  after,
+  before {
+    margin: 0;
+    padding: 0;
+    @include border-box;
+  }
+}
+
+@media #{$breakpoint-medium} {
+  .wrapper {
+    width: 95%;
+		max-width: $grid-max-width;
+
+  }
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      width: 100% / $grid-columns * $i;
+    }
+  }
+}

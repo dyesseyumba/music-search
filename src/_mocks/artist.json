@@ -1,0 +1,38 @@
+{
+  "external_urls": {
+    "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+  },
+  "followers": {
+    "href": null,
+    "total": 284373
+  },
+  "genres": [
+    "alternative hip hop",
+    "escape room",
+    "hip hop",
+    "pop rap",
+    "rap"
+  ],
+  "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+  "id": "4RnBFZRiMLRyZy0AzzTg2C",
+  "images": [{
+      "height": 640,
+      "url": "https://i.scdn.co/image/7195c290c3d01d6aa5ed38e586b7507844febba3",
+      "width": 640
+    },
+    {
+      "height": 320,
+      "url": "https://i.scdn.co/image/7566df19db79c5ef1d83d7d4595871f96a41e428",
+      "width": 320
+    },
+    {
+      "height": 160,
+      "url": "https://i.scdn.co/image/b189456130865fa15c236cba8ed12d06a4ce93cb",
+      "width": 160
+    }
+  ],
+  "name": "Run The Jewels",
+  "popularity": 71,
+  "type": "artist",
+  "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+}

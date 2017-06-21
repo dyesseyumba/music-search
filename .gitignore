@@ -70,3 +70,10 @@ typings/
 !.vscode/extensions.json
 
 # End of https://www.gitignore.io/api/node,visualstudiocode
+
+yarn.lock
+build/
+dist/
+package-lock.json
+toDelete.*
+toDelete?.*

@@ -1,0 +1,64 @@
+<!-- Modal content -->
+<div class="modal-content">
+
+  <!--Jumbotron Desktop View-->
+  <section class="modal-jumbotron modal-content-lg-only">
+
+    <div class="modal-jumbotron-block">
+      <img class="modal-jumbotron-img" ng-src="{{$ctrl.album.images[0].url}}" alt="Artist">
+    </div>
+
+    <span class="close" ng-click="$ctrl.closeModal()">
+        &times;</span>
+    <h1 class="fg-white" ng-bind="$ctrl.album.name"></h1>
+  </section>
+  <!--End Jumbotron Desktop View-->
+
+  <!-- Jumbotron Mobile View-->
+  <section class="modal-jumbotron modal-content-sm-only">
+
+    <div class="modal-jumbotron-block">
+      <img class="modal-jumbotron-img" ng-src="{{$ctrl.album.images[0].url}}" alt="Artist">
+    </div>
+
+    <div class="height-90px">
+      <div class="modal-jumbotron-type">Tracks on</div>
+      <div>
+        <span class="modal-jumbotron-name" ng-bind="$ctrl.album.name"></span>
+      </div>
+    </div>
+
+    <span class="close" ng-click="$ctrl.closeModal()">
+        &times;</span>
+
+  </section>
+  <!--End Jumbotron Mobile View-->
+
+  <section class="item-details">
+    <h6 class="modal-content-lg-only">Tracks</h6>
+    <hr>
+
+    <!--Article Desktop view-->
+    <article ng-repeat="track in $ctrl.tracks" class="modal-article-lg-only">
+      <div>
+        <!--<img src="../images/toDelete3.png" style="width: 100px" alt="Track">-->
+        <!--<img ng-src="{{track.images[2].url}}" style="width: 100px" alt="Track">-->
+      </div>
+      <div>
+        <div class="album-track-title" ng-bind="track.name"></div>
+        <div class="track-length" ng-bind="track.duration"></div>
+      </div>
+    </article>
+    <!--End erticle desktop view-->
+
+    <!--Article mobile view-->
+    <article class="modal-article-sm-only" ng-repeat="track in $ctrl.tracks">
+
+      <div class="album-track-title" ng-bind="track.name"></div>
+      <div class="track-length" ng-bind="track.duration"></div>
+    </article>
+    <!--End article mobile view-->
+
+  </section>
+</div>
+</div>

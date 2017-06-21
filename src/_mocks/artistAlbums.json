@@ -1,0 +1,1326 @@
+{
+  "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C/albums?offset=0&limit=20&album_type=single,album,compilation,appears_on,ep",
+  "items": [{
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/508kK3Kneu7yPgfIyVRUzB"
+      },
+      "href": "https://api.spotify.com/v1/albums/508kK3Kneu7yPgfIyVRUzB",
+      "id": "508kK3Kneu7yPgfIyVRUzB",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/a03a3687c887f99ee403877705bbacad66227408",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/bc2e8fd93c05a0dd4f4bbf5f5472c51f188559f1",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/ef94cc300570b215c907428e50cbaf0d15761ddc",
+          "width": 64
+        }
+      ],
+      "name": "Run The Jewels 3",
+      "type": "album",
+      "uri": "spotify:album:508kK3Kneu7yPgfIyVRUzB"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "CA",
+        "US"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3v2GjFB9V5kHgrOCXn3sI9"
+      },
+      "href": "https://api.spotify.com/v1/albums/3v2GjFB9V5kHgrOCXn3sI9",
+      "id": "3v2GjFB9V5kHgrOCXn3sI9",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/b345572d2bd9e2ee08e5b56f3a66a5ea01f94a68",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/61e514dc5dd8bcd20855e508069b84298b7beac7",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/b5e910bbb7160ee4ded1e2acf7a78383c94662dd",
+          "width": 64
+        }
+      ],
+      "name": "Run the Jewels 3",
+      "type": "album",
+      "uri": "spotify:album:3v2GjFB9V5kHgrOCXn3sI9"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AD",
+        "AR",
+        "AT",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EC",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HK",
+        "HN",
+        "HU",
+        "ID",
+        "IE",
+        "IS",
+        "IT",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "MT",
+        "MX",
+        "MY",
+        "NI",
+        "NL",
+        "NO",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "PY",
+        "SE",
+        "SG",
+        "SK",
+        "SV",
+        "TR",
+        "TW",
+        "UY"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/7q1uNF3HT1wTjxuMW0rFJn"
+      },
+      "href": "https://api.spotify.com/v1/albums/7q1uNF3HT1wTjxuMW0rFJn",
+      "id": "7q1uNF3HT1wTjxuMW0rFJn",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/b345572d2bd9e2ee08e5b56f3a66a5ea01f94a68",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/61e514dc5dd8bcd20855e508069b84298b7beac7",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/b5e910bbb7160ee4ded1e2acf7a78383c94662dd",
+          "width": 64
+        }
+      ],
+      "name": "Run the Jewels 3",
+      "type": "album",
+      "uri": "spotify:album:7q1uNF3HT1wTjxuMW0rFJn"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "JP"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/47ibac3fHSb9IybUKZ83IN"
+      },
+      "href": "https://api.spotify.com/v1/albums/47ibac3fHSb9IybUKZ83IN",
+      "id": "47ibac3fHSb9IybUKZ83IN",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/98e234d1fd1ed3929a28653afc7ff34238a726cb",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/44a90cdb7bd44261dfdee8a863bda41f749cb6c5",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/754c27f3f5a0c3df83eaf793b0632ff7b44f9045",
+          "width": 64
+        }
+      ],
+      "name": "Run The Jewels 3 (Japanese Edition)",
+      "type": "album",
+      "uri": "spotify:album:47ibac3fHSb9IybUKZ83IN"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AU",
+        "HK",
+        "ID",
+        "MY",
+        "NZ",
+        "PH",
+        "SG",
+        "TW"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/4nmmSzq9V6UEn0j3KL6jSn"
+      },
+      "href": "https://api.spotify.com/v1/albums/4nmmSzq9V6UEn0j3KL6jSn",
+      "id": "4nmmSzq9V6UEn0j3KL6jSn",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/3243b2672f9d2082b2ca6bd67d203b3cb6054fba",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/0188f10ec277ca97b17efc1e4d272933cf2f500b",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/6eba81b559586622b5192347f8ef4269c5205a69",
+          "width": 64
+        }
+      ],
+      "name": "Meow The Jewels",
+      "type": "album",
+      "uri": "spotify:album:4nmmSzq9V6UEn0j3KL6jSn"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AD",
+        "AR",
+        "AT",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "CA",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EC",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HN",
+        "HU",
+        "IE",
+        "IS",
+        "IT",
+        "JP",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "MT",
+        "MX",
+        "NI",
+        "NL",
+        "NO",
+        "PA",
+        "PE",
+        "PL",
+        "PT",
+        "PY",
+        "SE",
+        "SK",
+        "SV",
+        "TR",
+        "US",
+        "UY"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/0YHFRaVnIWPj0gJWvlAoxE"
+      },
+      "href": "https://api.spotify.com/v1/albums/0YHFRaVnIWPj0gJWvlAoxE",
+      "id": "0YHFRaVnIWPj0gJWvlAoxE",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/5b04fa722e3acb45393c2cd9c5c0955655044043",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/8de91d29f365f3c3426994a85b7ffb43ade61163",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/8c673f904782cb335f9de2e160c5b1c7e03453c3",
+          "width": 64
+        }
+      ],
+      "name": "Meow the Jewels",
+      "type": "album",
+      "uri": "spotify:album:0YHFRaVnIWPj0gJWvlAoxE"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AD",
+        "AR",
+        "AT",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "CA",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EC",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HN",
+        "HU",
+        "IE",
+        "IS",
+        "IT",
+        "JP",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "MT",
+        "MX",
+        "NI",
+        "NL",
+        "NO",
+        "PA",
+        "PE",
+        "PL",
+        "PT",
+        "PY",
+        "SE",
+        "SK",
+        "SV",
+        "TR",
+        "US",
+        "UY"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3VXRciwxfId9K9kfh3ZCIz"
+      },
+      "href": "https://api.spotify.com/v1/albums/3VXRciwxfId9K9kfh3ZCIz",
+      "id": "3VXRciwxfId9K9kfh3ZCIz",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/5b04fa722e3acb45393c2cd9c5c0955655044043",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/8de91d29f365f3c3426994a85b7ffb43ade61163",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/8c673f904782cb335f9de2e160c5b1c7e03453c3",
+          "width": 64
+        }
+      ],
+      "name": "Meow the Jewels",
+      "type": "album",
+      "uri": "spotify:album:3VXRciwxfId9K9kfh3ZCIz"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AD",
+        "AR",
+        "AT",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "CA",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EC",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HN",
+        "HU",
+        "IE",
+        "IS",
+        "IT",
+        "JP",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "MT",
+        "MX",
+        "NI",
+        "NL",
+        "NO",
+        "PA",
+        "PE",
+        "PL",
+        "PT",
+        "PY",
+        "SE",
+        "SK",
+        "SV",
+        "TR",
+        "US",
+        "UY"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/6BHQVUgJHRw8g0pRaU8n44"
+      },
+      "href": "https://api.spotify.com/v1/albums/6BHQVUgJHRw8g0pRaU8n44",
+      "id": "6BHQVUgJHRw8g0pRaU8n44",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/e13053646904616476fb51092a4052264515df02",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/1d19af15e9431bb243e30d256fa6d40546215d0e",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/3303e816ac788dbb0e1f4e4a8f0aec9d3d8bec3d",
+          "width": 64
+        }
+      ],
+      "name": "Spotify Sessions",
+      "type": "album",
+      "uri": "spotify:album:6BHQVUgJHRw8g0pRaU8n44"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3jsGTpdRkOnbn8VhU9J4A7"
+      },
+      "href": "https://api.spotify.com/v1/albums/3jsGTpdRkOnbn8VhU9J4A7",
+      "id": "3jsGTpdRkOnbn8VhU9J4A7",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/a42709613cbd7f83f5eec2a24b4a57bdcb24b7b5",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/1726ca440e06e019d6a46e1576299819fa2ddda3",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/9a231632c64767540d01bf860bdd656eb1df7c77",
+          "width": 64
+        }
+      ],
+      "name": "Run the Jewels 2",
+      "type": "album",
+      "uri": "spotify:album:3jsGTpdRkOnbn8VhU9J4A7"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AD",
+        "AR",
+        "AT",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "CA",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EC",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HK",
+        "HN",
+        "HU",
+        "ID",
+        "IE",
+        "IS",
+        "IT",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "MT",
+        "MX",
+        "MY",
+        "NI",
+        "NL",
+        "NO",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "PY",
+        "SE",
+        "SG",
+        "SK",
+        "SV",
+        "TR",
+        "TW",
+        "US",
+        "UY"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/2lPYlP4eumsjz6LBG8GCbG"
+      },
+      "href": "https://api.spotify.com/v1/albums/2lPYlP4eumsjz6LBG8GCbG",
+      "id": "2lPYlP4eumsjz6LBG8GCbG",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/7faa16835aee312077945f30dc5cd48215c7044a",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/e05df184e1b6c5bcc8a398527b6c578ed7d9a710",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/70e0cb83e96934920f17564871a01f7d55359a8f",
+          "width": 64
+        }
+      ],
+      "name": "Run the Jewels 2",
+      "type": "album",
+      "uri": "spotify:album:2lPYlP4eumsjz6LBG8GCbG"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AD",
+        "AR",
+        "AT",
+        "AU",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "CA",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EC",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HK",
+        "HN",
+        "HU",
+        "ID",
+        "IE",
+        "IS",
+        "IT",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "MT",
+        "MX",
+        "MY",
+        "NI",
+        "NL",
+        "NO",
+        "NZ",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "PY",
+        "SE",
+        "SG",
+        "SK",
+        "SV",
+        "TR",
+        "TW",
+        "US",
+        "UY"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3ywgGLzUIGJbOpctxvVNZi"
+      },
+      "href": "https://api.spotify.com/v1/albums/3ywgGLzUIGJbOpctxvVNZi",
+      "id": "3ywgGLzUIGJbOpctxvVNZi",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/a2093d98af6608e3d9007ba4884478a8f764dcf7",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/d3955cee525de473f1483ee67a3378677021e7b7",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/b89e5d172d4a0636d40df2f23a56a3e7a86f72ce",
+          "width": 64
+        }
+      ],
+      "name": "Run the Jewels 2",
+      "type": "album",
+      "uri": "spotify:album:3ywgGLzUIGJbOpctxvVNZi"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+          },
+          "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+          "id": "4RnBFZRiMLRyZy0AzzTg2C",
+          "name": "Run The Jewels",
+          "type": "artist",
+          "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/57UnSUpae3SbRekxNa5Kgl"
+          },
+          "href": "https://api.spotify.com/v1/artists/57UnSUpae3SbRekxNa5Kgl",
+          "id": "57UnSUpae3SbRekxNa5Kgl",
+          "name": "El-P",
+          "type": "artist",
+          "uri": "spotify:artist:57UnSUpae3SbRekxNa5Kgl"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AR",
+        "AT",
+        "AU",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "CA",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EC",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HK",
+        "HN",
+        "HU",
+        "ID",
+        "IE",
+        "IS",
+        "IT",
+        "JP",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "MT",
+        "MX",
+        "MY",
+        "NI",
+        "NL",
+        "NO",
+        "NZ",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "PY",
+        "SE",
+        "SG",
+        "SK",
+        "SV",
+        "TR",
+        "TW",
+        "US",
+        "UY"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/2ZyrfJY5s31jPFFxKrgKK1"
+      },
+      "href": "https://api.spotify.com/v1/albums/2ZyrfJY5s31jPFFxKrgKK1",
+      "id": "2ZyrfJY5s31jPFFxKrgKK1",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/6e49f6f76433d2d7712fba63181714484ffcf5ec",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/ccfb3968fd2dcebf1d314b8f6b80c45cafc0a77a",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/a4c5063d095e3baed67eebef5a4502ccc829fed6",
+          "width": 64
+        }
+      ],
+      "name": "Run the Jewels Instrumentals",
+      "type": "album",
+      "uri": "spotify:album:2ZyrfJY5s31jPFFxKrgKK1"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/6ZDtjIcWV33fzSpZrgILd9"
+      },
+      "href": "https://api.spotify.com/v1/albums/6ZDtjIcWV33fzSpZrgILd9",
+      "id": "6ZDtjIcWV33fzSpZrgILd9",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/9e28f85bc8910ae6819a75a42fa18960db94a107",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/8524697d743cb4a9ade3b103951a920ef6efb53f",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/c19a5f59b8272cd7880641d00c0fa887078e8368",
+          "width": 64
+        }
+      ],
+      "name": "Run The Jewels (Deluxe European Instrumentals)",
+      "type": "album",
+      "uri": "spotify:album:6ZDtjIcWV33fzSpZrgILd9"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/1H1fAPGlmA1OxjrbPqSMRs"
+      },
+      "href": "https://api.spotify.com/v1/albums/1H1fAPGlmA1OxjrbPqSMRs",
+      "id": "1H1fAPGlmA1OxjrbPqSMRs",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/9e28f85bc8910ae6819a75a42fa18960db94a107",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/8524697d743cb4a9ade3b103951a920ef6efb53f",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/c19a5f59b8272cd7880641d00c0fa887078e8368",
+          "width": 64
+        }
+      ],
+      "name": "Run The Jewels",
+      "type": "album",
+      "uri": "spotify:album:1H1fAPGlmA1OxjrbPqSMRs"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AD",
+        "AR",
+        "AT",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EC",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HK",
+        "HN",
+        "HU",
+        "ID",
+        "IE",
+        "IS",
+        "IT",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "MT",
+        "MY",
+        "NI",
+        "NL",
+        "NO",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "PY",
+        "SE",
+        "SG",
+        "SK",
+        "SV",
+        "TR",
+        "TW",
+        "UY"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/5okrDWqn2b0dX1VBpaZRxQ"
+      },
+      "href": "https://api.spotify.com/v1/albums/5okrDWqn2b0dX1VBpaZRxQ",
+      "id": "5okrDWqn2b0dX1VBpaZRxQ",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/27ee3391a9ee7cc80cb9f99ceab13eb18f82f371",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/89181df85406785903579fa822afe5bda5fb41b0",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/56d03c29a116283602738addd667fe0cea3f4a09",
+          "width": 64
+        }
+      ],
+      "name": "Run The Jewels (Deluxe European Edition)",
+      "type": "album",
+      "uri": "spotify:album:5okrDWqn2b0dX1VBpaZRxQ"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "CA",
+        "MX",
+        "US"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/0hVXUOlozgihW44G4Il0Gu"
+      },
+      "href": "https://api.spotify.com/v1/albums/0hVXUOlozgihW44G4Il0Gu",
+      "id": "0hVXUOlozgihW44G4Il0Gu",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/06d5b712d099f1603188f6bb36456c8c56037fcd",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/1ebd200d4b05e2f7b3a53282426452b3fa407ef3",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/57dcc3bc5cf9b5a242cbe3ab0efabdfe635b1f96",
+          "width": 64
+        }
+      ],
+      "name": "Run the Jewels",
+      "type": "album",
+      "uri": "spotify:album:0hVXUOlozgihW44G4Il0Gu"
+    },
+    {
+      "album_type": "album",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "CA",
+        "MX",
+        "US"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/4A5O8wxqPjkeqcqaVLIaKV"
+      },
+      "href": "https://api.spotify.com/v1/albums/4A5O8wxqPjkeqcqaVLIaKV",
+      "id": "4A5O8wxqPjkeqcqaVLIaKV",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/2e54a87bdbd5ddcf8677244e28d3e2bd89fe06cc",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/2752fb991bbeb5069a00f0eeb20134d8a03c26b4",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/e94538c5436dc0e8774a1c4bdcc53aeb384d6bc2",
+          "width": 64
+        }
+      ],
+      "name": "Run the Jewels",
+      "type": "album",
+      "uri": "spotify:album:4A5O8wxqPjkeqcqaVLIaKV"
+    },
+    {
+      "album_type": "single",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AU",
+        "NZ"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/5tZFLm2Z3Eod6hYllAR8T0"
+      },
+      "href": "https://api.spotify.com/v1/albums/5tZFLm2Z3Eod6hYllAR8T0",
+      "id": "5tZFLm2Z3Eod6hYllAR8T0",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/27ac06f455ee9f3bc9239e72de19808aac3b7b2d",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/fd13669fd0770930e807c514c07fa6236d1e7816",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/a5b4c8c430ea6c18cb64f90e4af6309b4ea2bf37",
+          "width": 64
+        }
+      ],
+      "name": "Panther Like a Panther (Original Demo Version)",
+      "type": "album",
+      "uri": "spotify:album:5tZFLm2Z3Eod6hYllAR8T0"
+    },
+    {
+      "album_type": "single",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "JP"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/7tnvE3vbbhoFOFVZh7dCKy"
+      },
+      "href": "https://api.spotify.com/v1/albums/7tnvE3vbbhoFOFVZh7dCKy",
+      "id": "7tnvE3vbbhoFOFVZh7dCKy",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/5024aaa089a500f19845d2d632bdd5bbd8bcf8c0",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/284498d4b14b1bdb9f14cc638a630c3baab3f03b",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/dc5b3ceb2e7bf38eb80230a853db672c42a9892f",
+          "width": 64
+        }
+      ],
+      "name": "Panther Like A Panther (Original Demo Version)",
+      "type": "album",
+      "uri": "spotify:album:7tnvE3vbbhoFOFVZh7dCKy"
+    },
+    {
+      "album_type": "single",
+      "artists": [{
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4RnBFZRiMLRyZy0AzzTg2C"
+        },
+        "href": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C",
+        "id": "4RnBFZRiMLRyZy0AzzTg2C",
+        "name": "Run The Jewels",
+        "type": "artist",
+        "uri": "spotify:artist:4RnBFZRiMLRyZy0AzzTg2C"
+      }],
+      "available_markets": [
+        "AD",
+        "AR",
+        "AT",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "CA",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EC",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HK",
+        "HN",
+        "HU",
+        "ID",
+        "IE",
+        "IS",
+        "IT",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "MT",
+        "MX",
+        "MY",
+        "NI",
+        "NL",
+        "NO",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "PY",
+        "SE",
+        "SG",
+        "SK",
+        "SV",
+        "TR",
+        "TW",
+        "US",
+        "UY"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/0gc4LRHfvxGCljMVwgNZnC"
+      },
+      "href": "https://api.spotify.com/v1/albums/0gc4LRHfvxGCljMVwgNZnC",
+      "id": "0gc4LRHfvxGCljMVwgNZnC",
+      "images": [{
+          "height": 640,
+          "url": "https://i.scdn.co/image/692c471699b21e23bc9a7fc66f64af29e0bffdc2",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/6ee88122bf77083716d435d2453854c5511e4fcb",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/9a58aba6f9b3228ceaf71061a3d59b752477d369",
+          "width": 64
+        }
+      ],
+      "name": "Panther Like a Panther (Original Demo Version)",
+      "type": "album",
+      "uri": "spotify:album:0gc4LRHfvxGCljMVwgNZnC"
+    }
+  ],
+  "limit": 20,
+  "next": "https://api.spotify.com/v1/artists/4RnBFZRiMLRyZy0AzzTg2C/albums?offset=20&limit=20&album_type=single,album,compilation,appears_on,ep",
+  "offset": 0,
+  "previous": null,
+  "total": 49
+}

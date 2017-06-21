@@ -1,0 +1,31 @@
+<section ng-cloak>
+  <div class="wrapper">
+    <div class="row">
+      <div class="col-3" ng-repeat="result in $ctrl.spotifyResults" ng-click="$ctrl.openModal(result.id, result.type)">
+        <div class="item-block">
+          <img class="img-fluid img-item-label" ng-if="result.images[1] != null" ng-src="{{result.images[1].url}}" alt="Spotify item">
+          <img class="img-fluid img-item-icon" ng-if="result.type === 'artist'" src="../images/artist-icon@2x.png" />
+          <img class="img-fluid img-item-icon" ng-if="result.type === 'album'" src="../images/album-icon.png" />
+          <img class="img-fluid img-item-empty" ng-if="result.images[1] == null" src="../images/vynil.png" />
+        </div>
+        <div class="item-label">
+          <span ng-bind="result.name"></span>
+        </div>
+      </div>
+
+    </div>
+    <div class="row center-block" style="padding: 1rem 0 1rem 0">
+      <button class="btn" ng-click="$ctrl.loadNextArtistsOrAlbums()">
+        SHOW ME MORE!
+      </button>
+    </div>
+  </div>
+</section>
+
+<div id="music-album" class="modal">
+  <music-albums album-id="{{$ctrl.albumId}}"></music-albums>
+</div>
+
+<div id="music-artist" class="modal">
+  <music-artists artist-id="{{$ctrl.artistId}}"></music-albums>
+</div>

@@ -1,0 +1,50 @@
+//Colors
+.bg-pink-jumbotron {
+  background: linear-gradient(#CD4282, #B3455D);
+}
+
+.bg-black-search-box {
+  background-color: #333441;
+}
+
+.bg-black-result {
+  background-color: #383A49;
+}
+
+.fg-black-text-result {
+  color: #474958;
+}
+
+.fg-white {
+  color: #FFFFFF;
+}
+
+//Show/Hide element regarding screen size
+.visible-md {
+  display: none !important
+}
+
+@media (min-width: 30rem) {
+  .visible-md {
+    display: block !important
+  }
+}
+
+//Center block element
+.center-block {
+  display: flex;
+  justify-content: center;
+}
+
+//blur 5px
+.blur-5px {
+  filter: blur(5px);
+}
+
+.height-90px {
+  height: 90px;
+}
+
+.width-100px {
+  width: 100px
+}

@@ -1,0 +1,16 @@
+// grid variables
+$grid-columns: 12;
+$grid-max-width: 70em;
+// breakpoints
+$breakpoint-medium: "only screen and (min-width: 30em)";
+//Typographie
+$fontName: "Raleway",
+"Segoe UI",
+"Open Sans",
+sans-serif,
+serif;
+
+$baseFontSize: .875rem;
+$secondTextFontSize: .75rem;
+$smallTextFontSize: .625rem;
+$accentTextFontSize: 1.1rem;
