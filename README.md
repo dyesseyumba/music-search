@@ -19,7 +19,7 @@ Here are different commands of this application
 The main framework of this solution is _angularjs 1.6.4_. The language specification is ES6. I associate it with [babel](https://babeljs.io/) to transcribe the distribution from ES6 to ES5. So the solution will work on olds browsers.
 
 ### Why ES6?
-ES6 brings much news in JavaScript and allows me write better code. So with ES6 the code is much more readable and easily testable. I no longer have to use external library such as lodash.
+ES6 brings much news in JavaScript and allows me write better code. With ES6 the code is much more readable and easily testable. I no longer have to use external libraries such as lodash.
 
 ### Developements tools
 
@@ -37,3 +37,5 @@ There are three webpack configurations in this solution. Configurations for deve
 #### Test
 [Kama](https://www.npmjs.com/package/karma), [karma-jasmine](https://www.npmjs.com/package/karma-jasmine), [karma-webpack](https://www.npmjs.com/package/karma-webpack) and [istanbul](https://www.npmjs.com/package/istanbul) are the main the test framework of this solution. Jasmine provides the infrastructure of test and karma the runner. karma-webpack allows to use webpack ability in the test environment. Thank to karma-webpack I can write test in ES6 and use all webpack benefice in this tests. Finally, Istabul allows code coverage. It generates html coverage file in coverage folder.
 
+## Connect With Spotify Api
+To connect with Spotify, you must have a Spotify account and allow your browser to display popup windows for this site. Then you can try to do your search. The application will guide you to connect with Spotif.
