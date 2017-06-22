@@ -15,9 +15,11 @@
     "build:html": "babel-node tools/buildHtml.js",
     "prebuild": "npm-run-all test clean-dist lint build:html",
     "build": "cross-env NODE_ENV=production babel-node tools/build.js",
+    "build:dist": "cross-env NODE_ENV=production babel-node tools/build.js",
     "postbuild": "babel-node tools/distServer.js",
     "test": "cross-env NODE_ENV=test karma start",
-    "test:watch": "karma start --silent --no-single-run"
+    "test:watch": "karma start --silent --no-single-run",
+    "postinstall": "npm run build:dist"
   },
   "dependencies": {
     "angular": "^1.6.4",
