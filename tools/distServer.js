@@ -5,20 +5,24 @@ import compression from 'compression';
 
 /*eslint-disable no-console */
 
-const port = 3001;
+const port = process.env.PORT || 3001;
 const app = express();
 
 app.use(compression());
 app.use(express.static('dist'));
 
-app.get('*', function(req, res) {
+app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
-app.listen(port, function(err) {
-  if (err) {
-    console.log(err);
-  } else {
-    open(`http://localhost:${port}`);
-  }
-});
+if (process.env.NODE_ENV === 'production') {
+  app.listen(port);
+} else {
+  app.listen(port, function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      open(`http://localhost:${port}`);
+    }
+  });
+}
