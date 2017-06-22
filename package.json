@@ -16,6 +16,7 @@
     "prebuild": "npm-run-all test clean-dist lint build:html",
     "build": "cross-env NODE_ENV=production babel-node tools/build.js",
     "postbuild": "babel-node tools/distServer.js",
+    "pretest": "npm install",
     "test": "cross-env NODE_ENV=test karma start",
     "test:watch": "karma start --silent --no-single-run"
   },
