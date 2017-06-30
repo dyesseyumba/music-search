@@ -1,5 +1,5 @@
 # Music search
-This code is a solution of **Compucorp Front End Developer Test v4.0**. The solution is an application which allows the user to search for an artist or album using the Spotify API to get the results.
+This solution is an application which allows the user to search for an artist or album using the Spotify API to get the results.
 
 ## Requirements
 To launch this solution, you must have this tools
